@@ -15,6 +15,7 @@
 * 9/8/17 - Completed poll 'What lectures did you view'
 * 9/8/17 - Accepted the github invitation to bigdata-i523
 * 9/11/17 - Attended zoom meeting
+* 9/18/17 - Viewed post zoom meeting video about questions regarding latex
 
 #Theory
 
