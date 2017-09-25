@@ -1,3 +1,9 @@
+# Meeting
+
+* 2017/09/11: Meeting: Attended zoom meeting
+* 2017/09/18: Meeting: Viewed post zoom meeting video about questions regarding latex
+* 2017/09/25: Meeting: Attended zoom meeting
+
 # Logistic
 
 * 8/22/17 - Enrolled in Piazza
