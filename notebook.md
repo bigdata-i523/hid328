@@ -20,8 +20,7 @@
 * 9/8/17 - Completed poll 'What is your python knowledge'
 * 9/8/17 - Completed poll 'What lectures did you view'
 * 9/8/17 - Accepted the github invitation to bigdata-i523
-* 9/11/17 - Attended zoom meeting
-* 9/18/17 - Viewed post zoom meeting video about questions regarding latex
+
 
 # Theory
 
@@ -44,4 +43,10 @@
 
 * 9/6/17 - Submitted topic for paper 1
 * 9/16/17 - Submitted topic for paper 2
+* 9/25/17 - Viewed video how to write a good research paper
+* 9/26/17 - Read writing track section 2.1
+* 9/27/17 - Read writing track section 2.2 LaTeX
+* 9/27/17 - Created paper1 journel article in sharelatex
+* 9/27/17 - Uploaded first draft of paper1 into github
+* 9/27/17 - Research on the paper1 Topic is in progress
 
