@@ -50,3 +50,8 @@
 * 9/27/17 - Uploaded first draft of paper1 into github
 * 9/27/17 - Research on the paper1 Topic is in progress
 
+# Location
+
+* Address: Mountain View, CA
+* Latitude: 37.386052
+* Longitude: -122.083851
