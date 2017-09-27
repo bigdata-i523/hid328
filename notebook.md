@@ -46,6 +46,7 @@
 * 9/25/17 - Viewed video how to write a good research paper
 * 9/26/17 - Read writing track section 2.1
 * 9/27/17 - Read writing track section 2.2 LaTeX
+* 9/27/17 - Fixed paper1 folder entries
 * 9/27/17 - Created paper1 journel article in sharelatex
 * 9/27/17 - Uploaded first draft of paper1 into github
 * 9/27/17 - Research on the paper1 Topic is in progress
