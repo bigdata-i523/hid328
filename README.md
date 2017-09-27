@@ -18,8 +18,9 @@ paper1:
    hid:
    - 328
    title: Big data analysis in Finance Sector
-   abstract: Derive insights from financial data using big data technologies
-   url: https://github.com/bigdata-i523/hid328/paper1/paper1report.pdf
+   abstract: >
+       Derive insights from financial data using big data technologies
+   url: https://github.com/bigdata-i523/hid328/paper1/report.tex
    type: latex
    status: in progress
 ```
@@ -33,7 +34,8 @@ paper2:
    hid:
    - 328
    title: Big data analytics in data center network monitoring
-   abstract: Predict the network failures by analyzing the large amount of data collected from data center devices
+   abstract: >
+       Predict the network failures by analyzing the large amount of data collected from data center devices
    url: https://github.com/bigdata-i523/hid328/paper2/paper2report.pdf   
    type: latex
    status: not yet started
