@@ -1,0 +1,121 @@
+a) lists only the lines between lines that start with ```
+
+
+#!/usr/bin/python2.7
+
+import yaml
+import sys
+
+for filename in sys.argv[1:]:
+    with open(filename) as f:
+        found = False
+        for line in f:
+                s = str(line)
+                if s.startswith("```"):
+                        if found == True:
+                                found = False
+                        else:
+                                found = True
+                elif found == True :
+                        print line
+
+Another solution:
+
+#!/usr/bin/python2.7
+
+import yaml
+import sys
+
+for filename in sys.argv[1:]:
+    with open(filename) as f:
+        count = 0
+        for line in f:
+                s = str(line)
+                if s.startswith("```"):
+                        count = count + 1
+
+                elif count == 1:
+                        print s
+                else:
+                        count = 0
+
+
+
+b) check if the lines have a TAB in it
+
+#!/usr/bin/python2.7
+
+import yaml
+import sys
+
+for filename in sys.argv[1:]:
+    with open(filename) as f:
+        found = False
+        for line in f:
+                s = str(line)
+                if s.startswith("```"):
+                        if found == True:
+                                found = False
+                        else:
+                                found = True
+                elif found == True :
+                        if '\t' in line:
+                                print line
+
+
+c) read the lines as a  yaml string
+
+
+#!/usr/bin/python2.7
+
+import yaml
+import sys
+
+for filename in sys.argv[1:]:
+    with open(filename) as f:
+        count = 0
+        content = ''
+        for line in f:
+                s = str(line)
+                if s.startswith("```"):
+                        count = count + 1
+
+                elif count == 1:
+                        content = content + s
+                elif count == 2:
+                        yamlstr = yaml.load(content)
+                        print yamlstr
+                        count = 0
+                        content = ''
+
+d) print out the dictionary
+
+
+#!/usr/bin/python2.7
+
+import yaml
+import sys
+
+for filename in sys.argv[1:]:
+    with open(filename) as f:
+        count = 0
+        content = ''
+        for line in f:
+                s = str(line)
+                if s.startswith("```"):
+                        count = count + 1
+
+                elif count == 1:
+                        content = content + s
+                elif count == 2:
+                        yamlstr = yaml.load(content)
+                        #print yamlstr
+                        count = 0
+                        content = ''
+                        print "YAML dictionary is", type(yamlstr), yamlstr
+
+
+
+
+
+
