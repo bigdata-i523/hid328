@@ -28,6 +28,7 @@
 * 9/1/17 - Read the organization content
 * 9/5/17 - Read the introduction content
 * 9/10/17 - Read overview of Data Science
+* 9/29/17 - Read big data use cases survey
 
 # Practice
 
@@ -38,6 +39,7 @@
 * 9/17/17 - Setup pyenv, installed Python 2.7.13 and Python 3.6.2
 * 9/17/17 - Tried print statements and using variables
 * 9/18/17 - Created notebook.md in Github. Updated README file. Created folders for Paper 1 & 2
+* 9/28/17 - Completed yaml/python assignments
 
 # Writing
 
@@ -50,6 +52,8 @@
 * 9/27/17 - Created paper1 journel article in sharelatex
 * 9/27/17 - Uploaded first draft of paper1 into github
 * 9/27/17 - Research on the paper1 Topic is in progress
+
+
 
 # Location
 
