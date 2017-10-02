@@ -52,6 +52,8 @@
 * 9/27/17 - Created paper1 journel article in sharelatex
 * 9/27/17 - Uploaded first draft of paper1 into github
 * 9/27/17 - Research on the paper1 Topic is in progress
+* 9/30/17 - Paper writing is in progress
+* 10/01/17 - Paper writing is in progress
 
 
 
