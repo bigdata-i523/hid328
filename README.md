@@ -23,7 +23,7 @@ paper1:
    url: https://github.com/bigdata-i523/hid328/paper1/report.tex
    type: latex
    status: 95%
-   chapter: Buisiness
+   chapter: Business
 ```
    
 # Paper 2
