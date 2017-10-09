@@ -22,7 +22,7 @@ paper1:
        Derive insights from financial data using big data technologies
    url: https://github.com/bigdata-i523/hid328/paper1/report.tex
    type: latex
-   status: 95%
+   status: 100%
    chapter: Business
 ```
    
