@@ -1,0 +1,40 @@
+---
+Project:
+    abstract: TBD
+    author:
+        - Dhanya Mathew
+    hid:
+        - 328
+    title: TBD
+    type: latex
+    url: https://github.com/bigdata-i523/hid328/project/projectreport.pdf
+owner:
+    hid: 328
+    name: Dhanya Mathew
+    url: https://github.com/bigdata-i523/hid328
+paper1:
+    abstract: 'Derive insights from financial data using big data technologies
+
+        '
+    author:
+        - Dhanya Mathew
+    chapter: Business
+    hid:
+        - 328
+    status: 100%
+    title: Big data analysis in Finance Sector
+    type: latex
+    url: https://github.com/bigdata-i523/hid328/paper1/report.tex
+paper2:
+    abstract: 'Predict the network failures by analyzing the large amount of data
+        collected from data center devices
+
+        '
+    author:
+        - Dhanya Mathew
+    hid:
+        - 328
+    status: not yet started
+    title: Big data analytics in data center network monitoring
+    type: latex
+    url: https://github.com/bigdata-i523/hid328/paper2/paper2report.pdf
