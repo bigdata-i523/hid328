@@ -13,9 +13,7 @@ owner:
     name: Dhanya Mathew
     url: https://github.com/bigdata-i523/hid328
 paper1:
-    abstract: 'Derive insights from financial data using big data technologies
-
-        '
+    abstract: Derive insights from financial data using big data technologies
     author:
         - Dhanya Mathew
     chapter: Business
@@ -26,10 +24,9 @@ paper1:
     type: latex
     url: https://github.com/bigdata-i523/hid328/paper1/report.tex
 paper2:
-    abstract: 'Predict the network failures by analyzing the large amount of data
+    abstract: >
+        Predict the network failures by analyzing the large amount of data
         collected from data center devices
-
-        '
     author:
         - Dhanya Mathew
     hid:
