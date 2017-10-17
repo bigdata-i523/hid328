@@ -57,7 +57,7 @@
 * 10/02/17 - Completed 95% of paper1 report.tex
 * 10/02/17 - Uploaded report.tex and report.bib files to github
 * 10/08/17 - Completed paper1 report and bib file and uploaded to github
-
+* 10/10/17 - 10/15/17 - Could not work on anything
 
 
 
