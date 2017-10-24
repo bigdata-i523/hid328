@@ -58,6 +58,11 @@
 * 10/02/17 - Uploaded report.tex and report.bib files to github
 * 10/08/17 - Completed paper1 report and bib file and uploaded to github
 * 10/10/17 - 10/15/17 - Could not work on anything
+* 10/17/17 - Started reading for paper2
+* 10/20/17 - Corrected paper1 issues and uploaded the updated report.tex and report.bib files
+* 10/23/17 - Created turnitin account and uploaded paper1.pdf
+* 10/23/17 - Started working on paper2
+
 
 
 
