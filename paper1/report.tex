@@ -1,6 +1,6 @@
 \documentclass[sigconf]{acmart}
 
-\input{format/i523}
+\input{format/final}
 
 \begin{document}
 \title{Big Data Analysis in Finance Sector}
@@ -43,15 +43,15 @@ Data and predictive analytics\cite{accenture-next-generation-financial}. This nu
 
 The era of big data helps financial firms to take quality business decisions related to expanding revenues, managing costs, hiring resources etc. based on effective data analysis which provide access to real-time insights.  Data-driven decision making is one of the key advantages of big data technologies. Data driven decision making approach includes data storage, data elaboration, data analysis and decision making\cite{accenture-next-generation-financial}.
 
-\begin{figure}
+\begin{figure}[htb]
   \centering
-  \includegraphics[width=0.5\textwidth]{images/Figure1.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure1.png}
   \caption{Data-driven decision making approach 
   \cite{accenture-next-generation-financial}}
   \label{fig:Figure1} 
 \end{figure}
 
-Figure 1 shows data-driven decision making approach and discovery of new business opportunities.
+Figure 1 \TODO{USE ref} shows data-driven decision making approach and discovery of new business opportunities.
 
 \textit{Data Storage:} Even though big data does not define by the size alone, we need the right means to store the huge volume and variety of data. Big data is distributed - stored across many machines and managed with Hadoop File System and distributed DBs like HBase and Apache Cassandra\cite{big-data-storage}.
 
@@ -71,15 +71,15 @@ Figure 1 shows data-driven decision making approach and discovery of new busines
 
 The analysis is performed using the pertaining subset of the total data collected, comprising of feedback from around 20,000 customers\cite{bigdata-banking}. 
 
-\begin{figure}
+\begin{figure*}[htb]
   \centering
-  \includegraphics[width=0.5\textwidth]{images/Figure2.png}
+  \includegraphics[width=1.0\textwidth]{images/Figure2.png}
   \caption{Overall Customer Feedback for provided parameters 
   \cite{bigdata-banking}}
   \label{fig:Figure2} 
-\end{figure}
+\end{figure*}
 
-As shown in Figure2, the customers rated bank services as average. Hence the concerned bank took some measures to correct the issue, and this resulted in ratings improvements.
+As shown in Figure 2 \TODO{USE ref}, the customers rated bank services as average. Hence the concerned bank took some measures to correct the issue, and this resulted in ratings improvements.
 
 \subsection{Increased Productivity and Growth}
 Compared to traditional data warehouses, the big data concept of Data lakes to store raw data offers more flexibility in data access and analysis. Large volumes of data are stored, managed and analyzed in data lakes  by using automated and sophisticated analytical tools. 
@@ -95,15 +95,15 @@ Banks and financial services firms use analytics to differentiate fraudulent int
 
 The security and fraud analysis done by 2nd International Symposium on Big Data and Cloud Computing, clearly shows that, based on historical transactions and consumption capacity of customers, coupled with the behavioral analysis can help us reveal a potential threat to the system, as well as uncover frauds that might have happened in the past\cite{bigdata-banking}. 
 
-\begin{figure}
+\begin{figure*}[htb]
   \centering
-  \includegraphics[width=0.5\textwidth]{images/Figure3.png}
+  \includegraphics[width=1.0\textwidth]{images/Figure3.png}
   \caption{Net credit transactions count (left) and net debit transactions count (right) 
   \cite{bigdata-banking}}
   \label{fig:Figure3} 
-\end{figure}
+\end{figure*}
 
-As shown in Figure3 from the analysis, we can observe that net transactions count grows with time and subtly and in the month of May and June 2013, card ending 13 shows spike in number of transaction count. The number of transactions more than doubled during the period for this card holder. Normally this is where the analyst should sound an alarm. If we are to upscale our small dataset to include millions of card holders, such spikes are dangerous and can mean a potential compromise of the system. It clearly indicates a misuse of the Card by miscreants and unauthorized access of funds by unscrupulous agents.
+As shown in Figure \ref{fig:Figure3} from the analysis, we can observe that net transactions count grows with time and subtly and in the month of May and June 2013, card ending 13 shows spike in number of transaction count. The number of transactions more than doubled during the period for this card holder. Normally this is where the analyst should sound an alarm. If we are to upscale our small dataset to include millions of card holders, such spikes are dangerous and can mean a potential compromise of the system. It clearly indicates a misuse of the Card by miscreants and unauthorized access of funds by unscrupulous agents.
 
 
 
