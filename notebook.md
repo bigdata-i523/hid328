@@ -40,6 +40,7 @@
 * 9/17/17 - Tried print statements and using variables
 * 9/18/17 - Created notebook.md in Github. Updated README file. Created folders for Paper 1 & 2
 * 9/28/17 - Completed yaml/python assignments
+* 10/26/17 - Completed word count experiment and submitted in github
 
 # Writing
 
