@@ -1,6 +1,6 @@
 \documentclass[sigconf]{acmart}
 
-\input{format/final}
+\input{format/i523}
 
 \begin{document}
 \title{Big Data Analysis in Finance Sector}
@@ -33,7 +33,7 @@ Big data as the name implies, refers to large and complex data which continues t
 
 \section{Introduction}
 
-There are 3 fundamental elements to big data - Volume, Variety and Velocity. Velocity is the speed at which data must be stored and analyzed\cite{how-big-data-has-changed-finance}. Data is getting increasingly gathered by low-cost and innumerable information-sensing Internet of Things devices like radio-frequency identification (RFID) readers, aerial (remote sensing), wireless sensor networks, cameras, software logs, microphones etc and hence causing data sets to grow rapidly\cite{wiki-bigdata}. According to 2015 big data info graphic contributed by Ben Walker of Voucher Cloud, around 2.5 quintillion Bytes of data is created every day which would fill 10 million Blu-ray discs. These discs when stacked on one another, would measure the height of 4 Eiffel Towers. Ben suggests that data generation by 2018 will be 50,000 GB per second\cite{how-much-data-is-created-daily}. 
+There are 3 fundamental elements to big data - Volume, Variety and Velocity. Velocity is the speed at which data must be stored and analyzed\cite{how-big-data-has-changed-finance}. Data is getting increasingly gathered by low-cost and innumerable information-sensing Internet of Things devices like radio-frequency identification (RFID) readers, aerial (remote sensing), wireless sensor networks, cameras, software logs, microphones etc and hence causing data sets to grow rapidly\cite{wiki-bigdata}. According to 2015 big data info graphic contributed by Ben Walker of Voucher Cloud, around 2.5 Quintillion Bytes of data is created every day which would fill 10 million Blu-ray discs. These discs when stacked on one another, would measure the height of 4 Eiffel Towers. Ben suggests that data generation by 2018 will be 50,000 GB per second\cite{how-much-data-is-created-daily}. 
 
 According to Gartner Survey held in 2013, 64 percent of organizations were planned to invest or already invested in big data technology (including but not limited to Hadoop, NoSQL, Spark, R and Storm)\cite{gartner-survey}. Recent survey research indicates that 71 percent of firms in the financial services
 industry at a global level are exploring Big
@@ -91,25 +91,35 @@ Applications like, Machine learning algorithms, In-memory technologies, fast acc
 \subsection{Fraud Detection}
 One of the best ways to fight cybercrime is with early detection. Banks are prime targets for cybercriminals and fraudsters, and any kind of public breach creates a lot of embarrassment, bad publicity, and unwanted scrutiny. Clearly banks have a vested interest in any technology to identify and prevent a data breach or fraud\cite{the-top-5-trends-for-big-data-in-financial-services}.
 
-Banks and financial services firms use analytics to differentiate fraudulent interactions from legitimate business transactions. By applying analytics and machine learning, they are able to define normal activity based on a customer's history and distinguish it from unusual behavior indicating fraud. The analysis systems suggest immediate actions, such as blocking irregular transactions, which stops fraud before it occurs and improves profitability\cite{5-big-data-use-cases-in-banking-and-financial-services}.
+Financial institutions use analytics to identify fraudulent transactions from the genuine ones. Analysts can identify normal behavior based on the customer's past transactions. By applying analytics and machine learning, they can easily identify a fraud transaction based on the unusual behavior.
+An analysis system can have automated responses such a fraudulent transactions, including blocking that particular transaction. This stops the fraud even before it occurs. This can improve customer satisfaction and profitability of the bank\cite{5-big-data-use-cases-in-banking-and-financial-services}.
 
 A Security and Fraud analysis was done as part of the  2nd International Symposium on Big Data and Cloud Computing. Fraud analysis coupled with behavior analysis with past transactions and customers consumption capacity will reveal a potential threat to bank and as well as uncover past frauds\cite{bigdata-banking}. 
 
-\begin{figure*}[htb]
+\begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\textwidth]{images/Figure3.png}
-  \caption{Net credit transactions count (left) and net debit transactions count (right) 
+  \includegraphics[width=1.0\columnwidth]{images/Figure3.png}
+  \caption{Net credit transactions count 
   \cite{bigdata-banking}}
   \label{fig:Figure3} 
-\end{figure*}
+\end{figure}
 
-As shown in Figure \ref{fig:Figure3}, from the analysis, we can notice that the count of net transactions grows with time. And in the month of May and June 2013, card number ending 13 shows a spike in transaction count. The transactions are doubled during the said period for this particular card. Ideally, an analyst should sound an alarm in this particular case. When we upscale to include millions of customers, such spikes are dangerous. This means a potential system compromise. This clearly indicates a misuse of the card and unauthorized access of funds by frauds.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure4.png}
+  \caption{Net debit transactions count
+  \cite{bigdata-banking}}
+  \label{fig:Figure4} 
+\end{figure}
+
+As shown in Figure \ref{fig:Figure3}, the credit card transactions per card are increasing with time and the net ratio with previous month is the same.
+From Figure \ref{fig:Figure4}, we can notice that, in the month of May and June 2013, card number ending 13 shows a spike in transaction count. The transactions are doubled during the said period for this particular card. Ideally, an analyst should sound an alarm in this particular case. When we upscale to include millions of customers, such spikes are dangerous. This means a potential system compromise. This clearly indicates a misuse of the card and unauthorized access of funds by frauds.
 
 
 
 \subsection{Customer Segmentation and Personalized Marketing}
 
-Banks have been under pressure to change from product-centric to customer-centric businesses. One way to achieve that transformation is to better understand their customers through segmentation. Big data enables them to group customers into distinct segments, which are defined by data sets that may include customer demographics, daily transactions, interactions with online and telephone customer service systems, and external data, such as the value of their homes. Promotions and marketing campaigns are then targeted to customers according to their segments\cite{5-big-data-use-cases-in-banking-and-financial-services}.
+Customer segmentation helps banks to transform from product-centric to customer-centric business. Big data enables the bank to group customers into segments. Customer segments are derived from the data sets. The dataset includes demographics, transactions, interactions with online and telephone customer services. And also external data, such as housing price. Financial institutions can then run targetted campaigns based on this segments\cite{5-big-data-use-cases-in-banking-and-financial-services}.
 
 There are many segmentation identification algorithms available in the Big Data world.  Random Forest is one of the prominent algorithm. Apache spark, R are some of the technologies that have good integration with segmentation algorithms
 
@@ -139,11 +149,11 @@ Unlike traditional business intelligence systems, new techniques and technologie
 
 Big data plays an progressively important role in the financial services sector. It is used for every single thing from targeting advertisements to optimizing portfolios. While these technologies have many benefits, critics are quick to point out that they can also become a source of discrimination if they are developed and/or used in an improper way\cite{risk-with-bigdata}.
 
-\textit{Data Security:} When we are considering the logistics of data collection and analysis, concern about data security is obvious and often takes top place in our mind. Data theft is an uncontrolled and growing area of crime. Security related attacks are getting wider and more damaging\cite{5risks-bigdata}.
+\textit{Data Security:} When we are considering the logistics of data collection and analysis, concern about data security is obvious and often takes top place in our mind. Data theft is an uncontrolled and growing area of crime. Security-related attacks are getting wider and more damaging\cite{5risks-bigdata}.
 
-\textit{Data Privacy:} Data privacy is closely related to the issue of data security. We need to ensure that people's personal data are safe from criminals. Also it is essential to be sure that the sensitive information being collected and stored are not going to be misused by yourself or by people who are authorized to analyze and report on it.\cite{5risks-bigdata}.
+\textit{Data Privacy:} Data privacy is closely related to the issue of data security. We need to ensure that people's personal data are safe from criminals. Also, it is essential to be sure that the sensitive information being collected and stored are not going to be misused by yourself or by people who are authorized to analyze and report on it\cite{5risks-bigdata}.
 
-\textit{Bad Analytics:} Bad analytics means 'getting it wrong'. It is obviously a risk to misinterpret the data patterns shown by the data where in fact there may simply a random coincidence. For example, product sales may increase following a major sporting event. Sales data will show this rise prompting you to relate your product with sports fans. But in fact the rise was because of more people in town. The same situation can happen after a big music event as well\cite{5risks-bigdata}.
+\textit{Bad Analytics:} Bad analytics means 'getting it wrong'. It is obviously a risk to misinterpret the data patterns shown by the data where in fact there may simply a random coincidence. For example, product sales may increase following a major sporting event. Sales data will show this rise prompting you to relate your product with sports fans. But in fact, the rise was because of more people in town. The same situation can happen after a big music event as well\cite{5risks-bigdata}.
 
 \textit{Bad Data:} There can be scenarios where data projects start off by collecting immaterial, erroneous, or out of date data which tend to have less time in designing the project strategy\cite{5risks-bigdata}.
 
