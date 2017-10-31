@@ -62,6 +62,8 @@
 * 10/20/17 - Corrected paper1 issues and uploaded the updated report.tex and report.bib files
 * 10/23/17 - Created turnitin account and uploaded paper1.pdf
 * 10/23/17 - Started working on paper2
+* 10/25/17 - 10/31/17 - papaer2 writing is in progress
+* 10/25/17 - 10/31/17 - Issue fixing and making corrections to paper1 based on turnitin findings is in progress
 
 
 
