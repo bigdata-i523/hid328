@@ -1,6 +1,6 @@
 \documentclass[sigconf]{acmart}
 
-\input{format/i523}
+\input{format/final}
 
 \begin{document}
 \title{Big Data Analytics in Data Center Network Monitoring}
@@ -107,13 +107,13 @@ Traditional data center monitoring tools are developed for pre-cloud era. Today,
 
 Kentik's NPM solution has a host based agent called nProbe which can be deployed in hybrid data centers and cloud networks. This could monitor and analyse network performance factors such as latency, retransmits, out of order packets, and packet fragments based on actual application traffic flows, offering the most relevant and actionable intelligence \cite{kentik-introduces-new-npm-solution}.
 
-\begin{figure}[htb]
+\begin{figure*}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure3.png}
-  \caption{Total of connected devices (in billions) 
+  \includegraphics[width=1.0\textwidth]{images/Figure3.png}
+  \caption{Big data based SaaS NPM solution 
   \cite{big-data-network-performance-monitoring}}
   \label{fig:Figure3} 
-\end{figure}
+\end{figure*}
 
 As shown in Figure \ref{fig:Figure3}, nProbe running on host computers send network performance monitoring data securely to Internet via encrypting proxy agent which is optional. Kentik data engine receives this data from internet and stores this data for actionable analytics. This data engine is big data based and can scale horizontally to store unsummarized data and provides powerful analytics for alerting, diagnostics and other use cases.
 
