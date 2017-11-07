@@ -23,9 +23,9 @@
 
 \begin{abstract}
 
-Data Centers are evolving and adapting to newer strategies like virtualization.  It is very challenging to monitor the current complex network infrastructure and its performance. Big data technologies promise solutions for network monitoring and performance analysis on real-time data. Big data streaming technologies offer high availability, high throughput, low latency and horizontally scalable solutions. Big data applications use distributed architectures and work on a huge volume of either offline data or streaming data or both. 
+Data Centers are evolving and adapting to newer strategies like virtualization. It is very challenging to monitor the current complex network infrastructure and its performance. Big data technologies promise solutions for network monitoring and performance analysis on real-time data. Big data streaming technologies offer high availability, high throughput, low latency and horizontally scalable solutions. Big data applications use distributed architectures and work on a huge volume of either offline data or streaming data or both. 
 
-Network monitoring solutions monitor the infrastructure, collect generated events, stream it and analyze it using a distributed analytics platform. Insights are derived out of this analysis. These insights facilitate the authority to take data-driven decisions. Big data analytics correlates data from different sources in real-time along with historical data to identify issues proactively. This helps either an automated system/human intervention to take necessary steps before the event actually happen. We explore the various network traffic monitoring and data analytics processes involved in the networking world like fault monitoring, performance monitoring and threat analysis.
+Network monitoring solutions monitor the infrastructure, collect generated events, stream it and analyze it using a distributed analytics platform. Insights are derived out of this analysis. These insights facilitate the authority to take data-driven decisions. Big data analytics correlates data from different sources in real-time along with historical data to identify issues proactively. This helps either an automated system or human intervention to take necessary steps before the event actually happen. We explore the various network traffic monitoring and data analytics processes involved in the networking world like fault monitoring, performance monitoring and threat analysis.
 
 \end{abstract}
 
@@ -56,32 +56,19 @@ As shown in Figure \ref{fig:Figure1}, data center monitoring platform is capable
 
 \section{Data Center Network Monitoring}
 
-There are a number of IT infrastructure monitoring tools which can be integrated with big data analytical platform. AppDynamics(Application and server performance monitoring), CopperEgg(IT Infrastructure monitoring), Datadog(Cloud monitoring), Logicmonitor(monitors networks, servers, storage and cloud), Gear5(Website performance monitoring) are some of them \cite{top-server-monitoring-application-performance-monitoring-apm-solutions}. IT Infrastructure devices vary by type and manufacturer and the alarm or events need to be monitored will also vary accordingly. Fault, performance and SLA monitoring are very basic level of monitoring required for all types of devices.
+There are a number of IT infrastructure monitoring tools which can be integrated with big data analytical platform. AppDynamics (Application and server performance monitoring), CopperEgg (IT Infrastructure monitoring), Datadog (Cloud monitoring), Logicmonitor (monitors networks, servers, storage and cloud), Gear5 (Website performance monitoring) are some of them \cite{top-server-monitoring-application-performance-monitoring-apm-solutions}. IT infrastructure devices vary by type and manufacturer and the alarm or events need to be monitored will also vary accordingly. Fault, performance and SLA (Service Level Agreement) monitoring are very basic level of monitoring required for all types of devices.
 
 \subsection{Fault Monitoring}
 
 The fundamental task of system managers is to identify and rectify the faults in the network design and architecture. As today's huge Data Centers uses cloud networks,vitualization, parallel processing, load sharing etc, it is very crucial to detect, identify and remediate the network faults. Users may be connected to the network via locally or remotely via internet technologies.Faults in any of these areas will cause customer dissatisfaction. 
 
-Data centers are designed for scalability and hence network devices and servers are continuously get added, upgraded or replaced. Each fault that could happen in a data center can throw dozens of error reports. Hence the usage of a fault correlation software is important. This can be achieved by mechanisms like TL1 messages, SNMP traps, SYSLOG entries and application logs \cite{network-fault-management-in-todays-complex-data-centers}. Below are the basic areas getting monitored as part of fault monitoring.
-
-\begin{itemize}
-\item Server and Network Alarms
-\item Server and Network Events
-\item Server and Network Event Enrichment
-\item Server and Network Automatic Notification
-\end{itemize}
+Data centers are designed for scalability and hence network devices and servers are continuously get added, upgraded or replaced. Each fault that could happen in a data center can throw dozens of error reports. Hence the usage of a fault correlation software is important. This can be achieved by mechanisms like TL1 messages, SNMP traps, SYSLOG entries and application logs \cite{network-fault-management-in-todays-complex-data-centers}. The basic areas getting monitored on servers and network devices as part of fault monitoring are, server and network alarms, events, event enrichment and automatic notifications.
 
 \subsection{Performance Monitoring}
 
 Network performance depends on the type and capacity of the network connecting users to the application. Whenever an end user reports slow access to an application, the issue could be with the server or bandwidth or application itself \cite{network-monitoring-datacenter-management}. An event correlation software is essential here as well.
 
-Below are the basic areas getting monitored as part of performance monitoring.
-
-\begin{itemize}
-\item Network Performance
-\item Server and Network Performance Thresholds
-\item SLA Monitoring
-\end{itemize}
+The basic areas getting monitored as part of performance monitoring are, network performance, server and network performance threshold and SLA monitoring.
 
 \section{Data Center's Big Data Analytics}
 
@@ -105,7 +92,7 @@ Figure \ref{fig:Figure2} shows the data generation in billions per devices types
 
 Traditional data center monitoring tools are developed for pre-cloud era. Today, digital applications are distributed and traditional monitoring tools may not be effective. Hence Big Data based tools are necessary. Kentik introduced a new network performance management (NPM) tool for cloud based distributed applications and data centers \cite{kentik-introduces-new-npm-solution}. Kentik's NPM solution builds on Kentik Detect, the big data-based, SaaS network analytics platform chosen by digital leaders like Yelp, Box, Neustar, Pandora and Dailymotion.
 
-Kentik's NPM solution has a host based agent called nProbe which can be deployed in hybrid data centers and cloud networks. This could monitor and analyse network performance factors such as latency, retransmits, out of order packets, and packet fragments based on actual application traffic flows, offering the most relevant and actionable intelligence \cite{kentik-introduces-new-npm-solution}.
+Kentik's NPM solution has a host based agent called nProbe which can be deployed in hybrid data centers and cloud networks. This could monitor and analyse network performance factors such as latency, re-transmits, out of order packets, and packet fragments based on actual application traffic flows, offering the most relevant and actionable intelligence \cite{kentik-introduces-new-npm-solution}.
 
 \begin{figure*}[htb]
   \centering
@@ -115,23 +102,7 @@ Kentik's NPM solution has a host based agent called nProbe which can be deployed
   \label{fig:Figure3} 
 \end{figure*}
 
-As shown in Figure \ref{fig:Figure3}, nProbe running on host computers send network performance monitoring data securely to Internet via encrypting proxy agent which is optional. Kentik data engine receives this data from internet and stores this data for actionable analytics. This data engine is big data based and can scale horizontally to store unsummarized data and provides powerful analytics for alerting, diagnostics and other use cases.
-
-Big data performance analytics carried out on performance data are,
-
-\begin{itemize}
-\item Examine performance patterns
-\item Find commonalities
-\item Derive actionable insights
-\end{itemize}
-
-Below are the actionable insights that can be derived,
-
-\begin{itemize}
-\item Identifying devices exhibiting deviation from normal pattern
-\item Predict network performance
-\item Load balancing requirements
-\end{itemize}
+As shown in Figure \ref{fig:Figure3}, nProbe running on host computers send network performance monitoring data securely to Internet via encrypting proxy agent which is optional. Kentik data engine receives this data from internet and stores this data for actionable analytics. This data engine is big data based and can scale horizontally to store unsummarized data and provides powerful analytics for alerting, diagnostics and other use cases. Big data performance analytics may execute on performance data to, examine performance patterns, find commonalities, derive actionable insights. The actionable insights that can be derived are, identifying devices exhibiting deviation from normal pattern, predict network performance and load balancing requirements.
 
 
 \subsection{Server/Network Fault Data Analytics}
@@ -147,40 +118,19 @@ preceded by some malfunction signs or indications \cite{big-data-analytics-for-f
   \label{fig:Figure4} 
 \end{figure}
 
-Figure \ref{fig:Figure4}, shows the network fault analysis architecture using big data. The procedure may include below activities as well.
-
-\begin{itemize}
-\item Mine network event patterns
-\item Find commonalities
-\item Actionable Insights and prediction of network Faults
-\end{itemize}
+Figure \ref{fig:Figure4}, shows the network fault analysis architecture using big data. The procedure include activities like, mine network event patterns, find commonalities, actionable insights and prediction of network Faults.
 
 \subsection{Customer Care Data Analytics}
 
 Another main area of consideration in data center operations is Customer care. Using big data technologies we can track the entire customer journey including their previous and following operations. In particular related to data center, it is essential to analyze customer services, support emails, call logs and trouble tickets in order to understand their network and operational behaviour. 
 
-Based on bid data classification and clustering algorithms we can predict below actionable insights.
-
-\textit{Classification of Customers}:
-
-
-\begin{itemize}
-\item Customer Satisfaction Index
-\item Prediction of Customers to churn out of business
-\end{itemize}
-
-\textit{Clustering of Customers}:
-
-\begin{itemize}
-\item New Customer Plans
-\item Network/Infrastructure Planning
-\end{itemize}
+Based on big data classification algorithm, we can predict the customer satisfaction index and the possibility of a customer to churn out of business. Clustering algorithms are effective in predicting new customer plans and their network and infrastructure planning.
 
 \subsection{Threat Analysis}
 
 Network is vulnerable to cyber-attacks. Once the network is compromised, the attacker can infiltrate the enterprise and gain access to important corporate and personal data. This can cause significant damage to the business. Since an attack results in significantly above network traffic than usual, monitoring traffic for abnormal patterns can facilitate the detection of most of the cyber-attacks.
 
-A well designed threat detection system consists of network data collector, streaming module(Kafka, Storm etc.) and Analysis module. Collector will collect the data from network and send the data to Streaming module. Then the stream will be sent to analysis module. Analysis module consists of the latest streaming analysis technologies(Flink, Spark Streaming etc.) and the threat detection mechanisms to detect malicious activities. Cloud environment will give the advantage of concurrently processing huge volume of data and also increase the efficiency of monitoring and threat detection process.  
+A well designed threat detection system consists of network data collector, streaming module (Kafka, Storm etc.) and Analysis module. Collector will collect the data from network and send the data to Streaming module. Then the stream will be sent to analysis module. Analysis module consists of the latest streaming analysis technologies (Flink, Spark Streaming etc.) and the threat detection mechanisms to detect malicious activities. Cloud environment will give the advantage of concurrently processing huge volume of data and also increase the efficiency of monitoring and threat detection process.  
 
 Instead of offline analysis, we can utilize the statistical tools to extract meanings and use these models in the streaming data analysis to detect the threat. Statistical model may become more accurate as volume of data increases and can adapt to changes in the data over time. All these things should happen without compromising the time complexity and efficiency. We can use streaming k-means clustering algorithm and Fuzzy c-means clustering algorithm both of which can identify patterns over time to make the accurate decision \cite{streaming-based-network-monitoring-and-threat-detection-system}.
 
@@ -211,18 +161,18 @@ Figure \ref{fig:Figure5} shows that the port access count is within the range of
 Having big data in data center operations results improvements in \cite{datacenter-monitoring-and-analytics-platform},
 
 \begin{itemize}
-\item Operational Efficiency
-\item Reduce Infrastructure/Network Down Time
-\item Improve Customer Experience
-\item Financial Performance
-\item Reduce Network/Infrastructure Operations Expenditure
-\item Reduce Customer Churn
+\item Operational efficiency
+\item Reduce infrastructure/network down time
+\item Improve customer experience
+\item Financial performance
+\item Reduce network/infrastructure operations expenditure
+\item Reduce customer churn
 \end{itemize}
 
 
 \section{Conclusion}
 
-Today’s network poses performance and security challenges to network managers because of the layers of redundancy, management and virtualization. The only practical approach for the networking team is to stream or collect all the network related data which is voluminous and varied, into an analytical framework. Big Data analysis is opening up new sales opportunities and risk alleviation in the networking world. Organizations are already benefiting increased uptime, faster troubleshooting and improvement in security by on-boarding Big Data analytics in the network infrastructure.
+Today's networks pose performance and security challenges to network managers because of the layers of redundancy, management and virtualization. The only practical approach for the networking team is to stream or collect all the network related data which is voluminous and varied, into an analytical framework. Big Data analysis is opening up new sales opportunities and risk alleviation in the networking world. Organizations are already benefiting increased uptime, faster troubleshooting and improvement in security by on-boarding Big Data analytics in the network infrastructure.
 
 \begin{acks}
 
