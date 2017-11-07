@@ -60,7 +60,7 @@ There are a number of IT infrastructure monitoring tools which can be integrated
 
 \subsection{Fault Monitoring}
 
-The fundamental task of system managers is to identify and rectify the faults in the network design and architecture. As today's huge Data Centers uses cloud networks,vitualization, parallel processing, load sharing etc, it is very crucial to detect, identify and remediate the network faults. Users may be connected to the network via locally or remotely via internet technologies.Faults in any of these areas will cause customer dissatisfaction. 
+The fundamental task of system managers is to identify and rectify the faults in the network design and architecture. As today's huge Data Centers uses cloud networks,vitualization, parallel processing, load sharing etc, it is very crucial to detect, identify and remediate the network faults. Users may be connected to the network via locally or remotely via internet technologies. Faults in any of these areas will cause customer dissatisfaction. 
 
 Data centers are designed for scalability and hence network devices and servers are continuously get added, upgraded or replaced. Each fault that could happen in a data center can throw dozens of error reports. Hence the usage of a fault correlation software is important. This can be achieved by mechanisms like TL1 messages, SNMP traps, SYSLOG entries and application logs \cite{network-fault-management-in-todays-complex-data-centers}. The basic areas getting monitored on servers and network devices as part of fault monitoring are, server and network alarms, events, event enrichment and automatic notifications.
 
@@ -105,10 +105,9 @@ Kentik's NPM solution has a host based agent called nProbe which can be deployed
 As shown in Figure \ref{fig:Figure3}, nProbe running on host computers send network performance monitoring data securely to Internet via encrypting proxy agent which is optional. Kentik data engine receives this data from internet and stores this data for actionable analytics. This data engine is big data based and can scale horizontally to store unsummarized data and provides powerful analytics for alerting, diagnostics and other use cases. Big data performance analytics may execute on performance data to, examine performance patterns, find commonalities, derive actionable insights. The actionable insights that can be derived are, identifying devices exhibiting deviation from normal pattern, predict network performance and load balancing requirements.
 
 
-\subsection{Server/Network Fault Data Analytics}
+\subsection{Server or Network Fault Data Analytics}
 
-In practice, historical failure data integrated with real-time data are often used to estimate the failure distribution of an item using statistical methods. This leads the way to predict future failures with a data-driven confidence level. Initially, this worked only when the particular device operated in a relatively stationary environment with no chances of changes. Given the complexity of modern systems, multiple failure mechanisms may interact with each other in a very sophisticated manner; environmental uncertainties may also have a great impact on the occurrence of failures. This requires predicting future failures of an item based on data which can reflect its real condition. It has been estimated that 99 percent of machinery failures are
-preceded by some malfunction signs or indications \cite{big-data-analytics-for-fault-detection}. 
+In practice, historical failure data integrated with real-time data are often used to estimate the failure distribution of an item using statistical methods. This leads the way to predict future failures with a data-driven confidence level. Initially, this worked only when the particular device operated in a relatively stationary environment with no chances of changes. Given the complexity of modern systems, multiple failure mechanisms may interact with each other in a very sophisticated manner. Environmental uncertainties may also have a great impact on the occurrence of failures. This requires predicting future failures of an item based on data which can reflect its real condition. It has been estimated that 99 percent of machinery failures are preceded by some malfunction signs or indications \cite{big-data-analytics-for-fault-detection}. 
 
 \begin{figure}[htb]
   \centering
