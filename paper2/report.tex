@@ -1,6 +1,6 @@
 \documentclass[sigconf]{acmart}
 
-\input{format/i523}
+\input{format/final}
 
 \begin{document}
 \title{Big Data Analytics in Data Center Network Monitoring}
@@ -44,13 +44,13 @@ A good monitoring solution needs to be able to alert you to issues with server h
 
 By applying big data to data center operations, we can analyze the statistical and performance data obtained from multiple network devices like physical servers, virtual servers, routers, switches, firewalls, access points, storage etc. Big data can provide centralized and predictive analytics and we can identify the weak points in the system and determine what changes might improve the network performance \cite{key-benefits-of-managing-data-center-operations-with-analytics}.
 
-\begin{figure*}[htb]
+\begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\textwidth]{images/Figure1.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure1.png}
   \caption{Monitoring and analytical platform 
   \cite{datacenter-monitoring-and-analytics-platform}}
   \label{fig:Figure1} 
-\end{figure*}
+\end{figure}
 
 As shown in Figure \ref{fig:Figure1}, data center monitoring platform is capable of monitoring all types of network devices. The events captued by the monitoring tools will be passed to the big data analytical platform for processing. Here events from different monitoring tools will be integrated and related to obtain the insights. These insights would be the base for deriving decisions and in turn results improvements in operational efficiency and financial performance etc.
 
@@ -94,13 +94,13 @@ Traditional data center monitoring tools are developed for pre-cloud era. Today,
 
 Kentik's NPM solution has a host based agent called nProbe which can be deployed in hybrid data centers and cloud networks. This could monitor and analyse network performance factors such as latency, re-transmits, out of order packets, and packet fragments based on actual application traffic flows, offering the most relevant and actionable intelligence \cite{kentik-introduces-new-npm-solution}.
 
-\begin{figure*}[htb]
+\begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\textwidth]{images/Figure3.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure3.png}
   \caption{Big data based SaaS NPM solution 
   \cite{big-data-network-performance-monitoring}}
   \label{fig:Figure3} 
-\end{figure*}
+\end{figure}
 
 As shown in Figure \ref{fig:Figure3}, nProbe running on host computers send network performance monitoring data securely to Internet via encrypting proxy agent which is optional. Kentik data engine receives this data from internet and stores this data for actionable analytics. This data engine is big data based and can scale horizontally to store unsummarized data and provides powerful analytics for alerting, diagnostics and other use cases. Big data performance analytics may execute on performance data to, examine performance patterns, find commonalities, derive actionable insights. The actionable insights that can be derived are, identifying devices exhibiting deviation from normal pattern, predict network performance and load balancing requirements.
 
