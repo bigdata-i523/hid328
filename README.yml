@@ -20,7 +20,7 @@ paper1:
     hid:
         - 328
     status: Nov 2 17 100%
-    title: Big data analysis in Finance Sector
+    title: Big Data Analysis in Finance Sector
     type: latex
     url: https://github.com/bigdata-i523/hid328/paper1/report.tex
 paper2:
@@ -33,6 +33,6 @@ paper2:
     hid:
         - 328
     status: Nov 6 17 100%
-    title: Big data analytics in data center network monitoring
+    title: Big Data Analytics in Data Center Network Monitoring
     type: latex
-    url: https://github.com/bigdata-i523/hid328/paper2/paper2report.pdf
+    url: https://github.com/bigdata-i523/hid328/paper2/report.tex
