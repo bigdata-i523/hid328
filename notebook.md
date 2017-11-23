@@ -3,6 +3,10 @@
 * 2017/09/11: Meeting: Attended zoom meeting
 * 2017/09/18: Meeting: Viewed post zoom meeting video about questions regarding latex
 * 2017/09/25: Meeting: Attended zoom meeting
+* 2017/10/27: Meeting: Attended zoom meeting and clarified doubts regarding turnitin
+* 2017/10/30: Meeting: Attended zoom meeting and clarified doubts related to figure alignment in paper and experiments
+* 2017/11/13: Meeting: Attended zoom meeting
+* 2017/11/20: Meeting: Attended zoom meeting
 
 # Logistic
 
@@ -41,6 +45,15 @@
 * 9/18/17 - Created notebook.md in Github. Updated README file. Created folders for Paper 1 & 2
 * 9/28/17 - Completed yaml/python assignments
 * 10/26/17 - Completed word count experiment and submitted in github
+* 11/06/17 - Started with project work
+* 11/08/17 - Finalised data set
+* 11/10/17 - Working on the project
+* 11/15/17 - Project work is in progress
+* 11/18/17 - Completed graded quiz 
+* 11/19/17 - Completed word count experiment in jupyter notebook and submitted in github
+* 11/20/17 - Completed jupyter notebook experiment and uploaded in github
+* 11/22/17 - Project work is in progress
+
 
 # Writing
 
@@ -65,6 +78,9 @@
 * 10/23/17 - Started working on paper2
 * 10/25/17 - 10/31/17 - papaer2 writing is in progress
 * 10/25/17 - 10/31/17 - Issue fixing and making corrections to paper1 based on turnitin findings is in progress
+* 11/05/17 - Submitted paper2 final version
+* 11/06/17 - Started with project work
+
 
 
 
