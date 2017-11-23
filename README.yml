@@ -1,19 +1,11 @@
 ---
-Project:
-    abstract: TBD
-    author:
-        - Dhanya Mathew
-    hid:
-        - 328
-    title: TBD
-    type: latex
-    url: https://github.com/bigdata-i523/hid328/project/projectreport.pdf
 owner:
     hid: 328
     name: Dhanya Mathew
     url: https://github.com/bigdata-i523/hid328
 paper1:
-    abstract: Derive insights from financial data using big data technologies
+    abstract: >
+        Derive insights from financial data using big data technologies
     author:
         - Dhanya Mathew
     chapter: Business
@@ -37,3 +29,27 @@ paper2:
     title: Big Data Analytics in Data Center Network Monitoring
     type: latex
     url: https://github.com/bigdata-i523/hid328/paper2/report.tex
+Project:
+    review: Dec 4 2017
+    abstract: >
+        Banks often want to know the profile of their profitable
+        top 1% or 20% customers looks like. Conversely they may
+        also wonder what the general profile is of the customers
+        in the worst 1% and 20% of profit. Based on customer’s
+        data variables at any given time, a good predictive model
+        can predict which profit group (extremely unprofitable,
+        average, extremely profitable, etc.) customers falls into.
+        This helps financial institutions to better understand
+        what drives the customer profit and accordingly take
+        decisions to sell their products to the right customers.
+        Random forest classification algorithm can be used to
+        achieve this goal.
+    author:
+        - Dhanya Mathew
+    hid:
+        - 328
+    title: Predicting Profitable Customers in Banking Industry
+    type: latex
+    url: https://github.com/bigdata-i523/hid328/project/
+    status: Dec 04 17 20%
+    chapter: TBD
