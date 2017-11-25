@@ -1,0 +1,99 @@
+\documentclass[sigconf]{acmart}
+
+\input{format/i523}
+
+\begin{document}
+\title{Predicting Profitable Customers in Banking Industry}
+
+
+\author{Dhanya Mathew}
+\orcid{HID328}
+\affiliation{%
+  \institution{Indiana University}
+  \streetaddress{711 N Park Ave}
+  \city{Bloomington} 
+  \state{Indiana} 
+  \postcode{47408}
+}
+\email{dhmathew@iu.edu}
+
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{G. v. Laszewski}
+
+
+\begin{abstract}
+Banks often want to know the profile of their profitable top 1\% or 20\% customers looks like. Conversely they may also wonder what the general profile is of the customers in the worst 1\% and 20\% of profit. Based on customer’s data variables at any given time, a good predictive model can predict which profit group (extremely unprofitable, average, extremely profitable, etc.) customers falls into. This helps financial institutions to better understand what drives the customer profit and accordingly take decisions to sell their products to the right customers. Random forest classification algorithm can be used to achieve this goal.
+
+\end{abstract}
+
+\keywords{i523, HID328, Big Data, Spark, Python, Decision Trees , Random Forest}
+
+
+\maketitle
+
+
+
+\section{Introduction}
+
+Put here an introduction about your topic. 
+We just need one sample refernce so the paper compiles in LaTeX so we
+put it here \cite{editor00}.
+
+\section{Data Set}
+
+\section{Data Cleansing}
+
+\subsection{Scoring}
+
+\section{Data Analysis}
+
+\subsection{Exploratory Analysis}
+
+Interquartile Range:
+
+The interquartile range (IQR) is a measure of variability, based on dividing a data set into quartiles.
+
+Quartiles divide a rank-ordered data set into four equal parts. The values that divide each part are called the first, second, and third quartiles; and they are denoted by Q1, Q2, and Q3, respectively.
+
+Q1 is the "middle" value in the first half of the rank-ordered data set.
+Q2 is the median value in the set.
+Q3 is the "middle" value in the second half of the rank-ordered data set.
+The interquartile range is equal to Q3 minus Q1.\cite{stat-trek-statistics}
+
+Quartile:
+
+Quartiles divide a rank-ordered data set into four equal parts. The values that divide each part are called the first, second, and third quartiles; and they are denoted by Q1, Q2, and Q3, respectively.
+
+Note the relationship between quartiles and percentiles. Q1 corresponds to P25, Q2 corresponds to P50, Q3 corresponds to P75. Q2 is the median value in the set.
+
+See also:  	AP Statistics Tutorial: Measures of Position
+
+
+
+\subsection{Cross-Tabulation}
+
+\section{Data Modelling}
+
+\section{Results}
+
+
+
+\section{Conclusion}
+
+Put here an conclusion. Conlcusions and abstracts must not have any
+citations in the section.
+
+
+\begin{acks}
+
+  The authors would like to thank Dr. Gregor von Laszewski for his
+  support and suggestions to write this paper.
+
+\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{report} 
+
+
+\end{document}
