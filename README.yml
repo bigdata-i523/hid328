@@ -31,7 +31,11 @@ paper2:
     url: https://github.com/bigdata-i523/hid328/paper2/report.tex
 Project:
     type: project
-    review: Dec 4 2017
+    author:
+        - Dhanya Mathew
+    hid:
+        - 328
+    title: Predicting Profitable Customers in Banking Industry
     abstract: >
         Banks often want to know the profile of their profitable
         top 1% or 20% customers looks like. Conversely they may
@@ -43,13 +47,15 @@ Project:
         This helps financial institutions to better understand
         what drives the customer profit and accordingly take
         decisions to sell their products to the right customers.
-        Random forest classification algorithm can be used to
+        Random forest classification algorithm is used to
         achieve this goal.
-    author:
-        - Dhanya Mathew
-    hid:
-        - 328
-    title: Predicting Profitable Customers in Banking Industry
+    dataset: >
+        German credit data,
+        https://archive.ics.uci.edu/ml/datasets/Statlog+%28German+Credit+Data%29
+    analytics: Machine Learning
+    application: Finance 
+    chapter: Business
+    keywords: Big Data, Spark, Python, Decision Trees, Random Forest
+    review: Dec 4 2017
     url: https://github.com/bigdata-i523/hid328/project/
-    status: Dec 04 17 60%
-    chapter: TBD
+    status: 60%
