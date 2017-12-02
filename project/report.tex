@@ -48,7 +48,17 @@ There can be two scenarios of risks associated with the bank's decision. First, 
 
 \subsection{Methods and Technologies Involved}
 
-We took a sample data set of loan applications from customers to a bank. In the real scenarios, we will not be able to apply analytical methods directly on the data as it likely be imperfect and containing irrelevant information. Hence we do data cleaning as the first step. Here we did data cleaning using spark. The cleaned data has 1000 customer records with 20 variables.
+The goal of most of the big data projects are to analyze the Data and derive knowledge out of it. In other words, data is the input to the model and knowledge is the output. We also follow the same methods and processes for our project as shown in Figure \ref{fig:Figure1}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{project/images/Figure1.png}
+  \caption{Project Workflow
+  \cite{preprocessing}}
+  \label{fig:Figure1} 
+\end{figure}
+
+We took a sample data set of loan applications from customers to a bank. In the real scenarios, we will not be able to apply analytical methods directly on the raw data as it likely be imperfect and containing irrelevant information. Hence we do data cleaning as the first step. Here we did data cleaning using spark. The cleaned data has 1000 customer records with 20 variables.
 
 We did exploratory analysis like Chi-square test to understand data and for feature selection for analysis. We also did some graphical representations to show how the actual data is related and what are direct insights available from the cleaned data set.
 
@@ -56,28 +66,88 @@ To develop the model we first split the data set into two parts- training data a
 
 \section{Data Set}
 
-We used the German Credit data which is publically available in the UCI Machine Learning Repository \cite{uci} and also in the website of PennState Eberly College of Science \cite{psu-site}. Both these sites have the cleaned dataset and not the original one. Hence we recreated the original one from these data sets to understand and try out the data cleaning processes. Data sets include 1000 customer records and 20 variables and a class variable. In the class variable the actual class of the customer is specified - good or bad. The original data set in excel format is available in the github repository \cite{github}. Figure \ref{fig:Figure1} shows the first 10 rows of the original data set.
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure1.png}
-  \caption{First 10 rows of original data set
-  \cite{github}}
-  \label{fig:Figure1} 
-\end{figure}
+We used the German Credit data which is publically available in the UCI Machine Learning Repository \cite{uci} and also in the website of PennState Eberly College of Science \cite{psu-site}. Both these sites have the cleaned dataset and not the original one. Hence we recreated the original one from these data sets to understand and try out the data cleaning processes. Data sets include 1000 customer records and 20 variables and a class variable. In the class variable the actual class of the customer is specified - good or bad. The original data set in excel format is available in the github repository \cite{github}. Figure \ref{fig:Figure2} shows the first 10 rows of the original data set.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{project/images/Figure2.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
+  \caption{First 10 rows of original data set
+  \cite{github}}
   \label{fig:Figure2} 
 \end{figure}
 
-The cleaned data set we used in this project is taken from the website of PennState Eberly College of Science \cite{psu-site}. Figure \ref{fig:Figure2} shows first 10 rows from the cleaned data set. 
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
+  \caption{First 10 rows of cleaned data set
+  \cite{psu-site}}
+  \label{fig:Figure3} 
+\end{figure}
+
+The cleaned data set we used in this project is taken from the website of PennState Eberly College of Science \cite{psu-site} and it is uploaded in the github repository \cite{github}. Figure \ref{fig:Figure3} shows first 10 rows from the cleaned data set. The complete list of data set variables and their description is given in Table \ref{tab:table1}. 
+
+\begin{table}
+  \caption{Variables and description
+  \cite{psu-site}}
+  \label{tab:table1}
+  \begin{tabular}{cc}
+    \toprule
+     Variable& Description\\
+    \midrule
+    Credit& Creditability: Good or Bad\\
+    Account Status& Balance of current account\\
+    Credit Months& Duration of Credit (month)\\
+    Credit History& Payment Status of Previous Credit\\
+    Purpose& Purpose of credit\\
+    Credit Amount& Amount of credit\\
+    Savings& Value Savings or stocks\\
+    Employment& Length of current employment\\
+    Installment Rate& Installment in \% of current income\\
+    Personal Status& Sex and Marital Status\\
+    Guarantors& Further debtors\\
+    Residence& Duration in Current address\\
+    Property& Most valuable available asset\\
+    Age& Age in years\\
+    Other Installments& Concurrent Credits\\
+    Housing& Type of apartment\\
+    Credit Cards& No of Credits at this Bank\\
+    Occupation& Occupation\\
+    Dependents& No of dependents\\
+    Telephone& Phone number\\
+    Foreign Worker& Foreign worker\\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 \section{Data Cleansing}
 
+A massive amount of raw data is piling up in the recent years from different sources and it is been continuously getting stored as the storage mechanism is getting cheaper and the storage capacity increases day by day. This raw data cannot be analysed as it is by human or traditional applications as the processing capacity has exceeded because of the quantity of the data. That is the reason why big data technologies have evolved and they use distributed systems like MapReduce, Spark, Flink etc. Even if we have a big data solution to process the high quantity of raw data, it is not the efficiency and performance of the solution that determines the quality of the knowledge extracted but it depends on the quality of the data as well. The raw data likely be imperfect and containing noise, irrelevant information, missing values etc. It is well known that low quality data will lead to low quality knowledge \cite{preprocessing}. Hence data cleaning is the major step to be performed before we continue with data mining algorithms to make sure that we are using a suitable and relevant data set. 
+
+Data cleaning has 2 parts. First part is data preparation and second part is data reduction techniques. 
+
+\subsubsection{Data Preparation}
+
+The data going to the analytics model should be clean and noise free. Hence data preparation part includes tasks like data cleaning, data normalization, data transformation, missing value imputation, data integration and Noise identification. Figure \ref{fig:Figure4} shows the data preparations tasks \cite{preprocessing}.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{project/images/Figure4.png}
+  \caption{Data Preprocessing or preparation Tasks
+  \cite{preprocessing}}
+  \label{fig:Figure4} 
+\end{figure}
+
+\subsubsection{Data Reduction Techniques}
+
+To reduce the dimensionalty problem and the computational cost, because of the large number of variables and instances in the data set, we try to gather only the required set of quality data. Data reduction techniques include feature selection, instance selection and discretization. Figure \ref{fig:Figure5} shows data reduction techniques \cite{preprocessing}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{project/images/Figure5.png}
+  \caption{Data Reduction Approaches
+  \cite{preprocessing}}
+  \label{fig:Figure5} 
+\end{figure}
 
 
 \section{Data Analysis}
