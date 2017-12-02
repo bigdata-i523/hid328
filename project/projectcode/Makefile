@@ -1,10 +1,10 @@
 setup:
-	pip install pyspark
-	pip install jupyter
-	pip install pandas
-	pip install matplotlib
-	pip install seaborn
-	pip3 install -U numpy
+	sudo pip install pyspark
+	sudo pip install jupyter
+	sudo pip install pandas
+	sudo pip install matplotlib
+	sudo pip install seaborn
+	sudo pip3 install -U numpy
 
 run:setup
 	jupyter notebook ./project.ipynb
