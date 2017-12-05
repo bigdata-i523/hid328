@@ -1,6 +1,6 @@
 \documentclass[sigconf]{acmart}
 
-\input{format/i523}
+\input{format/final}
 
 \begin{document}
 \title{Predicting Profitable Customers in Banking Industry}
@@ -57,7 +57,7 @@ For this project, we have taken a sample data set of loan applications received 
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure1.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure1.png}
   \caption{Project Workflow
   \cite{preprocessing}}
   \label{fig:Figure1} 
@@ -102,43 +102,43 @@ There is another categorization of the machine learning algorithms depending on 
 
 We use supervised machine learning approaches in this project. In particular, the classification algorithms - Decision Tree and Random Forest.
 
-\subsubsection{Decision Tree}
+\subsubsection{Decision Tree}\label{Decision Tree}
 
-Decision Tree is a supervised machine learning algorithm used to solve both classification and regression problems. In decision tree, a trained model with a set of rules will be created based on the training data. The target class or value of a test/new data set will be predicted based on this training rules. Decision Tree algorithm is simple to understand as it uses a tree model representation to solve the problem. It starts from a root node and continues with other decision nodes. Each internal decision nodes corresponds to the feature variables and each leaf nodes corresponds to the class label \cite{decision-tree}. Figure shows the decision tree classifier. 
+Decision Tree is a supervised machine learning algorithm used to solve both classification and regression problems. In decision tree, a trained model with a set of rules will be created based on the training data. The target class or value of a test/new data set will be predicted based on this training rules. Decision Tree algorithm is simple to understand as it uses a tree model representation to solve the problem. It starts from a root node and continues with other decision nodes. Each internal decision nodes corresponds to the feature variables and each leaf nodes corresponds to the class label \cite{decision-tree}. Figure \ref{fig:Figure2} shows the decision tree classifier. 
 
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure1.png}
-  \caption{Project Workflow
-  \cite{preprocessing}}
-  \label{fig:Figure1} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure2.png}
+  \caption{Decision Tree Classifier
+  \cite{decision-tree}}
+  \label{fig:Figure2} 
 \end{figure}
 
 The best attribute will be chosen as the root node. To identify the root node there are 2 methods. They are, \emph{Information Gain} and \emph{Gini Index}. There are statistical approaches to calculate Information gain and Gini index values for each feature variables. Attribute with better value will be considered as the root node and other attributes will be placed in the internal nodes according to the values in recursive order. Step 1 to model the decision tree is placing the root attribute. In step 2, the training data set will be divided into 2 sub data sets in such a way that, both subsets will contain same attribute values for that variable. Step 1 and 2 will be repeated until we reach the leaf nodes with predicted class value \cite{decision-tree}.
 
 \textit{Overfitting:} Overfitting is a practical issue that can happen while building a decision tree. When the algorithm goes deeper and deeper it builds more branches because of the irregularities in data and the prediction accuracy of the model goes down accordingly. There are 2 methods can be used to avoid overfitting issues - \emph{Pre-Pruning} and \emph{Post-Pruning}. In Pre-pruning, we set a threshold value as a goodness measure and if it crosses, further split of the node will be stopped. In Post-Pruning, tree construction continues until all leafs are reached. Pruning will be done if the model shows overfitting issues. Cross-validation data will be used to measure the improvement in this method \cite{decision-tree}.
 
-\subsubsection{Random Forest}
+\subsubsection{Random Forest}\label{Random Forest}
 
-Like Decision Tree, Random Forest algorithm also can be used for classification as well as regression problems. It is a supervised machine learning algorithm. It uses decision tree concept as well but there will be more than one trees in a Random Forest. As the number of trees increases in the Random forest, the accuracy of the prediction also will increase accordingly. Random forest algorithm can handle missing values in the data. Also with more trees in the forest, overfitting issues will not occur in Random Forest algorithm. Figure shows the Random Forest model.
+Like Decision Tree, Random Forest algorithm also can be used for classification as well as regression problems. It is a supervised machine learning algorithm. It uses decision tree concept as well but there will be more than one trees in a Random Forest. As the number of trees increases in the Random forest, the accuracy of the prediction also will increase accordingly. Random forest algorithm can handle missing values in the data. Also with more trees in the forest, overfitting issues will not occur in Random Forest algorithm \cite{random-forest}. Figure \ref{fig:Figure3} shows the Random Forest model.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure1.png}
-  \caption{Project Workflow
-  \cite{preprocessing}}
-  \label{fig:Figure1} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure3.png}
+  \caption{Random Forest model
+  \cite{random-forest}}
+  \label{fig:Figure3} 
 \end{figure}
 
-Random Forest algorithm progresses via 2 stages - Random forest creation and Perform prediction. To create the Random Forest, we select a random number of feature variables from the total list of feature variables in the training data and create a Decision Tree out of it. We repeat this process to create desired number of trees. These randomly created trees will form a Random Forest. Figure shows how random forest algorithm works. 
+Random Forest algorithm progresses via 2 stages - Random forest creation and Perform prediction. To create the Random Forest, we select a random number of feature variables from the total list of feature variables in the training data and create a Decision Tree out of it. We repeat this process to create desired number of trees. These randomly created trees will form a Random Forest. Figure \ref{fig:Figure4} shows how random forest algorithm works. 
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure1.png}
-  \caption{Project Workflow
-  \cite{preprocessing}}
-  \label{fig:Figure1} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure4.png}
+  \caption{How random forest algorithm works
+  \cite{random-forest}}
+  \label{fig:Figure4} 
 \end{figure}
 
 The test data set will be analyzed against the rules developed by each of the trees to predict the output. To predict Random Forest output, the outputs of each of the trees are considered as votes. The top voted output is the final predicted value of the Random Forest.
@@ -146,7 +146,7 @@ The test data set will be analyzed against the rules developed by each of the tr
 
 \subsection{Installations}
 
-Technologies used in this project are discussed in detail in section \ref{Methods and Technologies Involved}. The installation commands on Ubuntu OS for each of these technologies are given in this section. Installations can be done from the Terminal window. 
+Technologies used in this project are discussed in detail in section \ref{Methods and Technologies Involved}. The installation commands on Ubuntu 16.04 OS for each of these technologies are given in this section. Installations can be done from the Terminal window. 
 
 \begin{enumerate}
   \item Python installation steps for ubuntu OS are available in the askubuntu website \cite{python-installations}.
@@ -165,7 +165,7 @@ All these installation steps are included in a make file referred in appendix \r
 
 We used the German Credit data which is publically available in the UCI Machine Learning Repository \cite{uci} and also in the website of PennState Eberly College of Science \cite{psu-site}. Both these sites have the cleaned dataset and not the original one. The dataset that we used in this project (german-credit.csv) is taken from the website of PennState Eberly College of Science \cite{psu-site} and it is uploaded in the Github repository \cite{github}. We recreated the original one from these data sets to understand and try out the data cleaning processes. We start our project with the recreated original data set (credit-data.csv) which is available in the Github repository \cite{github}. 
 
-Dataset includes 1000 customer records with 20 feature variables and a class variable. In the class variable, the actual class of the customer is specified - good or bad. The complete list of data set variables and their description is given in Table \ref{tab:table1}. Figure \ref{fig:Figure2} shows the first 10 rows of the original data set.
+Dataset includes 1000 customer records with 20 feature variables and a class variable. In the class variable, the actual class of the customer is specified - good or bad. The complete list of data set variables and their description is given in Table \ref{tab:table1}. Figure \ref{fig:Figure5} shows the first 10 rows of the original data set.
 
 \begin{table}
   \caption{Variables and description
@@ -203,10 +203,10 @@ Dataset includes 1000 customer records with 20 feature variables and a class var
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure2.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure5.png}
   \caption{First 10 rows of original data set
   \cite{github}}
-  \label{fig:Figure2} 
+  \label{fig:Figure5} 
 \end{figure}
 
 
@@ -219,42 +219,42 @@ Data cleaning has 2 parts. First part is data preparation and second part is dat
 
 \subsubsection{Data Preparation}
 
-The data going to the analytics model should be clean and noise free. Hence data preparation part includes tasks like data cleaning, data normalization, data transformation, missing value imputation, data integration and Noise identification. Figure \ref{fig:Figure4} shows the data preparations tasks \cite{preprocessing}.
+The data going to the analytics model should be clean and noise free. Hence data preparation part includes tasks like data cleaning, data normalization, data transformation, missing value imputation, data integration and Noise identification. Figure \ref{fig:Figure6} shows the data preparations tasks \cite{preprocessing}.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure4.png}
-  \caption{Data Preprocessing or preparation Tasks
+  \includegraphics[width=1.0\columnwidth]{images/Figure6.png}
+  \caption{Data Preprocessing and preparation tasks
   \cite{preprocessing}}
-  \label{fig:Figure4} 
+  \label{fig:Figure6} 
 \end{figure}
 
 \subsubsection{Data Reduction Techniques}
 
-To reduce the dimensionality problem and the computational cost, because of a large number of variables and instances in the data set, we try to gather only the required set of quality data. Data reduction techniques include feature selection, instance selection and discretization. Figure \ref{fig:Figure5} shows data reduction techniques \cite{preprocessing}
+To reduce the dimensionality problem and the computational cost, because of a large number of variables and instances in the data set, we try to gather only the required set of quality data. Data reduction techniques include feature selection, instance selection and discretization. Figure \ref{fig:Figure7} shows data reduction techniques \cite{preprocessing}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure5.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure7.png}
   \caption{Data Reduction Approaches
   \cite{preprocessing}}
-  \label{fig:Figure5} 
+  \label{fig:Figure7} 
 \end{figure}
 
-With respect to our chosen data set, data reduction techniques were already applied to the raw data and 1000 customer records and 21 variables were shortlisted. All these variables are either categorical (like Account-Balance, Previous-credit, purpose etc) or continuous (Duration-of-credit, Installment-percent, dependents). As part of data preparation for our analysis, we transformed the values of categorical variable's from string to scores (numerical values). For example, the variable creditability got 2 values - good and bad. After transformation process, ''good'' got replaced by ''1'' and ''bad'' got replaced by ''0''. Likewise, we gave scores for the values of the variables, Foreign-Worker, Telephone, Previous-Credit, Purpose, Sex-MaritalStatus, Guarantors and Type-apartment. Figure \ref{fig:Figure3} shows first 10 rows from the cleaned data set. 
+With respect to our chosen data set, data reduction techniques were already applied to the raw data and 1000 customer records and 21 variables were shortlisted. All these variables are either categorical (like Account-Balance, Previous-credit, purpose etc) or continuous (Duration-of-credit, Installment-percent, dependents). As part of data preparation for our analysis, we transformed the values of categorical variable's from string to scores (numerical values). For example, the variable creditability got 2 values - good and bad. After transformation process, ''good'' got replaced by ''1'' and ''bad'' got replaced by ''0''. Likewise, we gave scores for the values of the variables, Foreign-Worker, Telephone, Previous-Credit, Purpose, Sex-MaritalStatus, Guarantors and Type-apartment. Figure \ref{fig:Figure8} shows first 10 rows from the cleaned data set. 
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure8.png}
   \caption{First 10 rows of cleaned data set
   \cite{psu-site}}
-  \label{fig:Figure3} 
+  \label{fig:Figure8} 
 \end{figure}
 
 
 \section{Data Analysis}
 
-Big data analysis is the process of obtaining knowledge by analyzing and understanding hidden patterns, market trends, unknown correlations, customer preferences and other relevant information from large and varied datasets \cite{bigdata-analytics}. Big data analytics methods include exploratory analysis, data mining, predictive analytics, machine learning, deep learning etc. The results of the analysis can be visualized using tools like Tableau, Infogram, Plotly etc or by using python scripts. This project utilizes methods like exploratory analysis, predictive analysis, machine learning algorithms and visualizations of results using python scripts.
+Big data analysis is the process of obtaining knowledge by analyzing and understanding hidden patterns, market trends, unknown correlations, customer preferences and other relevant information from large and varied datasets \cite{bigdata-analytics}. Big data analytics methods include exploratory analysis, data mining, predictive analytics, machine learning, deep learning etc. The results of the analysis can be visualized using tools like Tableau, Infogram, Plotly etc or by using python scripts. This project utilizes methods like exploratory analysis, predictive analysis, machine learning algorithms and visualizations of results using python scripts. Python codes for all these analysis methods are given in appendix \ref{Project Code}.
 
 \subsection{Exploratory Analysis}
 
@@ -264,85 +264,77 @@ Exploratory analysis is basically to explore the data and understand what it act
 
 After data preprocessing, our dataset includes 1000 customer records with 20 feature variable and 1 class variable. Feature variable values can be visualized to understand the characteristics and how they are related to each other - proportionally or inversely. 
 
-Figure shows the histogram of credit amount disbursed with respect to frequency. From this diagram we understand that most of the customers requested for loans for upto 2500 German Marks. The number of customers decreases as the loan amount increases. And very few customers fall under the loan amount category over 10000 German Marks. 
+Figure \ref{fig:Figure9}shows the histogram of credit amount disbursed with respect to frequency. From this diagram we understand that most of the customers requested for loans for upto 2500 German Marks. The number of customers decreases as the loan amount increases. And very few customers fall under the loan amount category over 10000 German Marks. 
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure3} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure9.png}
+  \caption{Credit amount vs. Frequency}
+  \label{fig:Figure9} 
 \end{figure}
 
-Figure and Figure shows the credit amount availed by bad customers and good customers respectively. The trend is almost same that, maximum customers from both the classes fall under the category of upto 2500 German Marks. But there is a noticeable difference in the number of customers under 12500 range. Bad rated customers are more at this category.
+Figure \ref{figure10} and Figure \ref{figure11} shows the credit amount availed by bad customers and good customers respectively. The trend is almost same that, maximum customers from both the classes fall under the category of upto 2500 German Marks. But there is a noticeable difference in the number of customers under 12500 range. Bad rated customers are more at this category.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure3} 
-\end{figure}
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure3} 
-\end{figure}
-
-Figure shows the duration of credit in months vs. number of customers. From this graph we can understand that maximum number of customers opted for 10 to 15 months duration.
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure3} 
-\end{figure}
-
-Figure and Figure shows the duration of credit in months vs number of customer bad customers and good customers respectively. It shows that there is not much difference in the trend.
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure3} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure10.png}
+  \caption{Credit amount vs. bad customers}
+  \label{fig:Figure10} 
 \end{figure}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure3} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure11.png}
+  \caption{Credit amount vs. good customers}
+  \label{fig:Figure11} 
 \end{figure}
 
-Figure shows how customers are scattered with respect to age. Most of the borrowers fall the age group of 23 to 28.
+Figure \ref{fig:figure12}shows the duration of credit in months vs. number of customers. From this graph we can understand that maximum number of customers opted for 10 to 15 months duration.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure3} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure12.png}
+  \caption{Duration of credit in months vs. frequency}
+  \label{fig:Figure12}
 \end{figure}
 
-\subsubsection{Data Classification}:
-
-We have one class variable ''Creditability'' to classify the customers. We could extract this class information from dataset using PySpark Python script ''GroupBy''. Figure shows the output of the script.
+Figure \ref{fig:Figure13} and Figure \ref{fig:Figure14} shows the duration of credit in months vs number of customer bad customers and good customers respectively. It shows that there is not much difference in the trend.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure3} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure13.png}
+  \caption{Duration of credit in months vs. bad customers}
+  \label{fig:Figure13} 
 \end{figure}
 
-Customers in our dataset are classified into 2 classes - Good (1 = Creditworthy) and Bad (0 = Uncreditworthy). We have 700 customers in the Good class and 300 customers in the Bad class.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure14.png}
+  \caption{Duration of credit in months vs. good customers}
+  \label{fig:Figure14} 
+\end{figure}
+
+Figure \ref{fig:Figure15} shows how customers are scattered with respect to age. Most of the borrowers fall under the age group of 23 to 28.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure15.png}
+  \caption{Age vs. frequency}
+  \label{fig:Figure15} 
+\end{figure}
+
+\subsubsection{Data Classification}\label{Data Classification}:
+
+We have one class variable ''Creditability'' to classify the customers based on the bank's opinion on the actual applicants. We could extract this class information from dataset using PySpark Python script ''GroupBy''. Figure \ref{fig:Figure16} shows the output of the script.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure16.png}
+  \caption{Data classification}
+  \label{fig:Figure16} 
+\end{figure}
+
+Customers in our dataset are classified into 2 classes - Good (1 = Creditworthy) and Bad (0 = Uncreditworthy). We have 700 customers in the Good class and 300 customers in the Bad class. We divide our dataset of 1000 customer records randomly into 2 parts. First part is the training dataset with 700 customer records and second part is the test dataset of 300 customer records.
 
 
 \subsubsection{Interquartile Range}:
@@ -351,34 +343,31 @@ Interquartile Range is statistical method to measure the variability of the data
 
 We used pandas quantile function to extract this information for all the continuous variables.
 
-Figure shows the variability of Credit-Amount.
+Figure \ref{fig:figure17} shows the variability of Credit-Amount.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure3} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure17.png}
+  \caption{Variability in Credit-Amount}
+  \label{fig:Figure17} 
 \end{figure}
 
-Figure shows the variability of Duration of credit.
+Figure \ref{fig:figure18} shows the variability of Duration of credit.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure3} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure18.png}
+  \caption{Variability of Duration of credit}
+  \label{fig:Figure18} 
 \end{figure}
 
-Figure shows the variability of Age.
+Figure \ref{fig:figure19} shows the variability of Age.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure3} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure19.png}
+  \caption{Variability of Age}
+  \label{fig:Figure19} 
 \end{figure}
 
 \subsubsection{Cross-Tabulation}
@@ -387,13 +376,13 @@ Cross-Tabulation is a statistical method used to compare the relationship betwee
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{project/images/Figure3.png}
-  \caption{First 10 rows of cleaned data set
+  \includegraphics[width=1.0\columnwidth]{images/Figure20.png}
+  \caption{Contingency table of sex-marital status
   \cite{psu-site}}
-  \label{fig:Figure3} 
+  \label{fig:Figure20} 
 \end{figure}
 
-Figure shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married / widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
+Figure \ref{fig:Figure20}shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married / widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
 
 \subsubsection{Test of Independence}
 
@@ -420,7 +409,7 @@ If the calculated value is small that means, the variables are related. If the v
 \textit{Degrees of freedom:} Degrees of freedom is the number of scores that can be varied. It is calculated using the formula,
 
 \begin{equation}
-Degrees-of-freedom=(r-1)*(c-1)
+Degrees of freedom=(r-1)*(c-1)
 \end{equation}
 
 The calculated values are shown in figure
@@ -433,32 +422,127 @@ The calculated values are shown in figure
   \label{fig:Figure3} 
 \end{figure}
 
+\section{Models}
 
-\section{Data Modelling}
-
-\subsection{Penalty Matrix}
+Predictive models can be created using different Machine Learning algorithms such as Logistical Regression, Decision Trees, Random Forest etc. Machine learning algorithms generate models from the training data and tested against the test data to estimate the accuracy level. Before building predictive models, there are few baseline models can be created to compare and see what improvements we are actually trying to achieve. By comparing the accuracies of different predictive models against the base models, we can come up  with the best model for that particular problem. The best model is saved for the future predictions on new datasets.
 
 \subsection{Baseline Models}
 
+Baseline models use simple summary statistics. In classification problems like our scenario, baseline models are created based on the class values. As mentioned in the data classification section \ref{Data Classification}, our total list of 1000 customer records are devided into training dataset and test dataset. Training dataset has 700 customer records and test dataset has 300 customer records. For the baseline models, we evaluate the test data of 300 customer records.
+
+In this project we create 2 baseline models. 
+
+\textit{Baseline Model 1}: In this case, we consider all the input test customer records (300 customer records) belongs to the ''Good'' class. Since out of 1000 customers, 700 falls under ''Good'' class, we assume among the 300 customers in test dataset 70\% will fall under ''Good'' class and rest in ''Bad'' class, which means this baseline model holds 70\% accuracy. 
+
+\begin{table}
+  \caption{Baseline Model 1}
+  \label{tab:table2}
+  \begin{tabular}{cc}
+    \toprule
+     & Good\\
+    \midrule
+    Good& 210\\
+    Bad& 70\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Table \ref{tab:table2} shows the assumption in baseline model 1.
+
+\textit{Baseline Model 2}: In this case, we consider all the input test customer records (300 customer records) belongs to the ''Bad'' class. Since out of 1000 customers, 300 falls under ''Bad'' class, we assume among the 300 customers in test dataset 30\% will fall under ''Bad'' class and rest in ''Good'' class, which means this baseline model holds 30\% accuracy. 
+
+\begin{table}
+  \caption{Baseline Model 2}
+  \label{tab:table3}
+  \begin{tabular}{cc}
+    \toprule
+     & Bad\\
+    \midrule
+    Good& 210\\
+    Bad& 70\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Table \ref{tab:table3} shows the assumption in baseline model 2.
+
 \subsection{Decision Tree Model}
 
+To build this model, we use the machine learning algorithm - Decision Tree which is explained in section \ref{Decision Tree}. PySpark's class ''DecisionTreeClassifier'' is used to build different Decision Tree models from training data based on different tree attributes like MaxBins, Maxdepth, Impurity etc. Impurity measures are calculated internally by this classifier to identify the root node and other internal nodes. Gini Index is the method opted in our project.
+
+Formula to calculate Gini Index is,
+
+\begin{equation}
+Gini Index = \sum_{i=1}^Cf_i(1-{f_i})
+\end{equation}
+
+We created 2 Decision Tree models to compare the accuracy.
+
+\textit{Decision Tree with maxDepth None:} In this model, we set the maxDepth value of the Tree to None and we calculated the accuracy using PySpark's ''MulticlassClassificationEvaluator''. In this case, the tree can become arbitrarily deep and complex and more chances of overfitting issues.
+
+The accuracy of the output of this model is 0.679
+Maximum number of Bins are 32
+Depth is None
+
+\textit{Decision Tree after adjusting the attribute values:} In this model, we set the maxDepth value to 6 and and maxBins value to 20. We used the same PySpark's ''MulticlassClassificationEvaluator'' to calculate the accuracy. Since we have limited the maxDepth and maxBin values, the overfitting issues decreases.
+
+The accuracy of the output of this model is 0.716
+Number of Bins are 20
+Depth is 6
+
 \subsection{Random Forest}
+
+Random Forest Machine Learning algorithm which is explained in the section \ref{Random Forest} is used to build Random Forest model. We use PySpark class ''RandomForestClassifier'' to generate the model from training data. We build 2 Random Forest models one with default attribute and another one with chosen attribute values. 
+
+\textit{Random Forest with Default Settings:} In this case, the attributes of the Tree are selected by the ''RandomForestClassifier'' itself internally and accuracy of the model is calculated based on that.
+
+The accuracy of the output of this model is 0.756
+Maximum number of Bins are 32
+Maximum Depth is 5
+Maximum number of Trees are 20
+
+
+\textit{Tuning Random Forest with cross-validator:} In this case, we tune the Random Forest model by trying different attribute values for tree  attributes - maxDepth, maxBin and numTrees. We can provide multiple values for each attribute. We provided 3 values for maxDepth, 2 values for maxBins and 3 values for numTrees. We will start with some random values for these attributes. 
+
+We use \emph{cross-validation} techniques in this type of Random Forest model to get the best model. PySpark ''CrossValidator'' will analyse the values of the attributes. In this scenario, the ''CrossValidator'' will choose 3 values of attributes from 3*2*3 values. It will then try different combinations of the attribute values internally and finally the model will get tuned to a final set of attributes which derive the best model with maximum accuracy. 
+
+The accuracy of the output of this model is 0.779
+Number of Trees are 100
+
+As we identified the best model with maximum accuracy is the Random Forest model, we passed the actual dataset to this model and received an accuracy of 0.845
 
 \section{Results}
 
-\subsection{Baseline Model}
+Now we have all the desired models created which can predict the class of a new customer. We can compare and analyze the outputs of each of these models and conclude with the best model. We can analyze the results based on accuracy and mean penalty matrix.
 
-\subsection{Decision Tree Model}
+\textit{Penalty Matrix:} One important aspect to consider while choosing a predictive model is the accuracy. When considering the actual goal of this project, the model should be apt to minimize the risks and to maximize the profit. The model should ensure good prediction accuracy to achieve the goal. 
 
-\subsection{Random Forest}
+A penalty matrix is defined to calculate the loss to the bank. Penalty will be applied to each misclassifications and penalty value differs for wrong classifications - 'good as bad' and 'bad as good'. As discussed in the project goals section \ref{Project goals}, approving loan for an uncreditworthy customer will end up in more financial loss for the bank and accordingly is a greater risk. Hence classifying a bad customer wrongly as good customer will have more penalty.  
+
+\begin{table}
+  \caption{Penalty Matrix
+  \cite{psu-site}}
+  \label{tab:table4}
+  \begin{tabular}{ccc}
+    \toprule
+     Actual& Predicted 'Good'& Predicted 'Bad'\\
+    \midrule
+    Good& 0& 1\\
+    Bad& 5& 0\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Table \ref{tab:table4} shows the penalty matrix. For right predictions penalty is 0. If a good customer predicted as bad, the penalty is 1 and if a bad customer predicted as good, the penalty is 5. The sum of the penalty values multiplied with the respective number of misclassified customers will provide the total amount of loss.
 
 \section{Discussion}
 
 
+
+
 \section{Conclusion}
 
-Put here an conclusion. Conlcusions and abstracts must not have any
-citations in the section.
+Out of 4 predictive models created as part of this project, Random Forest has the maximum accuracy in classifying the customers in the right class. Even if it gives an accuracy of around 85\% it is not an error free model. There are 15\% chances for misclassification. The size of the dataset that we considered to develop this model may have a direct impact. If we can train the model with a large data set with tens of thousands of customer records and feature variables, the accuracy may increase close to 100\%. There might be other more adcanced machine learning algorithms and tools coming up to explore the chances of increasing the overall accuracy of the predictive models in common.
 
 
 \begin{acks}
@@ -479,7 +563,7 @@ citations in the section.
 Make file is created assuming that the target system has Python3 installed already.
 
 \subsection{Data Set}
-\subsection{Project Code}
+\subsection{Project Code}\label{Project Code}
 
 
 \end{document}
