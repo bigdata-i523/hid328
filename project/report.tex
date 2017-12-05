@@ -264,7 +264,7 @@ Exploratory analysis is basically to explore the data and understand what it act
 
 After data preprocessing, our dataset includes 1000 customer records with 20 feature variable and 1 class variable. Feature variable values can be visualized to understand the characteristics and how they are related to each other - proportionally or inversely. 
 
-Figure \ref{fig:Figure9}shows the histogram of credit amount disbursed with respect to frequency. From this diagram we understand that most of the customers requested for loans for upto 2500 German Marks. The number of customers decreases as the loan amount increases. And very few customers fall under the loan amount category over 10000 German Marks. 
+Figure \ref{fig:Figure9} shows the histogram of credit amount disbursed with respect to frequency. From this diagram, we understand that most of the customers requested for loans for up to 2500 German Marks. The number of customers decreases as the loan amount increases. And very few customers fall under the loan amount category over 10000 German Marks. 
 
 \begin{figure}[htb]
   \centering
@@ -273,7 +273,7 @@ Figure \ref{fig:Figure9}shows the histogram of credit amount disbursed with resp
   \label{fig:Figure9} 
 \end{figure}
 
-Figure \ref{figure10} and Figure \ref{figure11} shows the credit amount availed by bad customers and good customers respectively. The trend is almost same that, maximum customers from both the classes fall under the category of upto 2500 German Marks. But there is a noticeable difference in the number of customers under 12500 range. Bad rated customers are more at this category.
+Figure \ref{fig:Figure10} and Figure \ref{fig:Figure11} shows the credit amount availed by bad customers and good customers respectively. The trend is almost same that, maximum customers from both the classes fall under the category of up to 2500 German Marks. But there is a noticeable difference in the number of customers under 12500 range. Bad rated customers are more in this category.
 
 \begin{figure}[htb]
   \centering
@@ -289,7 +289,7 @@ Figure \ref{figure10} and Figure \ref{figure11} shows the credit amount availed 
   \label{fig:Figure11} 
 \end{figure}
 
-Figure \ref{fig:figure12}shows the duration of credit in months vs. number of customers. From this graph we can understand that maximum number of customers opted for 10 to 15 months duration.
+Figure \ref{fig:Figure12} shows the duration of credit in months vs. number of customers. From this graph, we can understand that maximum number of customers opted for 10 to 15 months duration.
 
 \begin{figure}[htb]
   \centering
@@ -339,11 +339,11 @@ Customers in our dataset are classified into 2 classes - Good (1 = Creditworthy)
 
 \subsubsection{Interquartile Range}:
 
-Interquartile Range is statistical method to measure the variability of the data. This will be applicable only for the continuous variables (Credit-amount, Duration of credit and Age). The rank-ordered data will be divided into 4 equal parts called quartiles. Values are called the First (Q1) Second (Q2) and Third (Q3) quartiles. Q2 is the Median value of the dataset \cite{stat-trek-statistics}.
+Interquartile Range is a statistical method to measure the variability of the data. This will be applicable only for the continuous variables (Credit-amount, Duration of credit and Age). The rank-ordered data will be divided into 4 equal parts called quartiles. Values are called the First (Q1) Second (Q2) and Third (Q3) quartiles. Q2 is the Median value of the dataset \cite{stat-trek-statistics}.
 
 We used pandas quantile function to extract this information for all the continuous variables.
 
-Figure \ref{fig:figure17} shows the variability of Credit-Amount.
+Figure \ref{fig:Figure17} shows the variability of Credit-Amount.
 
 \begin{figure}[htb]
   \centering
@@ -352,7 +352,7 @@ Figure \ref{fig:figure17} shows the variability of Credit-Amount.
   \label{fig:Figure17} 
 \end{figure}
 
-Figure \ref{fig:figure18} shows the variability of Duration of credit.
+Figure \ref{fig:Figure18} shows the variability of Duration of credit.
 
 \begin{figure}[htb]
   \centering
@@ -361,7 +361,7 @@ Figure \ref{fig:figure18} shows the variability of Duration of credit.
   \label{fig:Figure18} 
 \end{figure}
 
-Figure \ref{fig:figure19} shows the variability of Age.
+Figure \ref{fig:Figure19} shows the variability of Age.
 
 \begin{figure}[htb]
   \centering
@@ -372,7 +372,7 @@ Figure \ref{fig:figure19} shows the variability of Age.
 
 \subsubsection{Cross-Tabulation}
 
-Cross-Tabulation is a statistical method used to compare the relationship between categorical variables. In our scenario we examine the relationship of the categorical variables with the class variable ''creditability''. We create a \emph{contingency table} which displays the frequency of categorical variables with respect to the class \cite{cross-tabulation}. 
+Cross-Tabulation is a statistical method used to compare the relationship between categorical variables. In our scenario, we examine the relationship of the categorical variables with the class variable ''creditability''. We create a \emph{contingency table} which displays the frequency of categorical variables with respect to the class \cite{cross-tabulation}. 
 
 \begin{figure}[htb]
   \centering
@@ -386,11 +386,11 @@ Figure \ref{fig:Figure20}shows the contingency table created for the variable se
 
 \subsubsection{Test of Independence}
 
-We need to identify the features that are closely related to the class/credit rating to build a predictive model. We do a test of independence on all our feature variables to identify the the ones to be selected for data modelling. The method we use to do the test of Independence is the Chi-squared test. The output of the Chi-squared test is the input to the Logistical Regression Algorithm. Variables which are not related to the class variable will be discarded from further analysis of Logical Regression. 
+We need to identify the features that are closely related to the class/credit rating to build a predictive model. We do a test of independence on all our feature variables to identify the ones to be selected for data modeling. The method we use to do the test of Independence is the Chi-squared test. The output of the Chi-squared test is the input to the Logistical Regression Algorithm. Variables which are not related to the class variable will be discarded from further analysis of Logical Regression. 
 
 \textit{Pearson's Chi-squared test:}
 
-Chi squared test is used to determine the significant difference between expected values and observed values in one or more categories. There are 2 types of Chi-squared test - Goodness of Fit and Test for Independence. 
+Chi-squared test is used to determine the significant difference between expected values and observed values in one or more categories. There are 2 types of Chi-squared test - Goodness of Fit and Test for Independence. 
 
 We use the second method - \emph{Test of Independence}. It compares 2 variables in a contingency table to check if they are related. In other words, it examines if the distributions of categorical variables are different from one another. 
 
@@ -416,11 +416,11 @@ The calculated values are shown in figure \ref{fig:Figure21}.
 
 \section{Models}
 
-Predictive models can be created using different Machine Learning algorithms such as Logistical Regression, Decision Trees, Random Forest etc. Machine learning algorithms generate models from the training data and tested against the test data to estimate the accuracy level. Before building predictive models, there are few baseline models can be created to compare and see what improvements we are actually trying to achieve. By comparing the accuracies of different predictive models against the base models, we can come up  with the best model for that particular problem. The best model is saved for the future predictions on new datasets.
+Predictive models can be created using different Machine Learning algorithms such as Logistical Regression, Decision Trees, Random Forest etc. Machine learning algorithms generate models from the training data and tested against the test data to estimate the accuracy level. Before building predictive models, there are few baseline models can be created to compare and see what improvements we are actually trying to achieve. By comparing the accuracies of different predictive models against the base models, we can come up with the best model for that particular problem. The best model is saved for the future predictions on new datasets.
 
 \subsection{Baseline Models}
 
-Baseline models use simple summary statistics. In classification problems like our scenario, baseline models are created based on the class values. As mentioned in the data classification section \ref{Data Classification}, our total list of 1000 customer records are devided into training dataset and test dataset. Training dataset has 700 customer records and test dataset has 300 customer records. For the baseline models, we evaluate the test data of 300 customer records.
+Baseline models use simple summary statistics. In classification problems like our scenario, baseline models are created based on the class values. As mentioned in the data classification section \ref{Data Classification}, our total list of 1000 customer records are divided into training dataset and test dataset. Training dataset has 700 customer records and test dataset has 300 customer records. For the baseline models, we evaluate the test data of 300 customer records.
 
 In this project we create 2 baseline models. 
 
@@ -476,7 +476,7 @@ The accuracy of the output of this model is 0.679
 Maximum number of Bins are 32
 Depth is None
 
-\textit{Decision Tree after adjusting the attribute values:} In this model, we set the maxDepth value to 6 and and maxBins value to 20. We used the same PySpark's ''MulticlassClassificationEvaluator'' to calculate the accuracy. Since we have limited the maxDepth and maxBin values, the overfitting issues decreases.
+\textit{Decision Tree after adjusting the attribute values:} In this model, we set the maxDepth value to 6 and maxBins value to 20. We used the same PySpark's ''MulticlassClassificationEvaluator'' to calculate the accuracy. Since we have limited the maxDepth and maxBin values, the overfitting issues decreases.
 
 The accuracy of the output of this model is 0.716
 Number of Bins are 20
@@ -494,9 +494,9 @@ Maximum Depth is 5
 Maximum number of Trees are 20
 
 
-\textit{Tuning Random Forest with cross-validator:} In this case, we tune the Random Forest model by trying different attribute values for tree  attributes - maxDepth, maxBin and numTrees. We can provide multiple values for each attribute. We provided 3 values for maxDepth, 2 values for maxBins and 3 values for numTrees. We will start with some random values for these attributes. 
+\textit{Tuning Random Forest with cross-validator:} In this case, we tune the Random Forest model by trying different attribute values for tree attributes - maxDepth, maxBin and numTrees. We can provide multiple values for each attribute. We provided 3 values for maxDepth, 2 values for maxBins and 3 values for numTrees. We will start with some random values for these attributes. 
 
-We use \emph{cross-validation} techniques in this type of Random Forest model to get the best model. PySpark ''CrossValidator'' will analyse the values of the attributes. In this scenario, the ''CrossValidator'' will choose 3 values of attributes from 3*2*3 values. It will then try different combinations of the attribute values internally and finally the model will get tuned to a final set of attributes which derive the best model with maximum accuracy. 
+We use \emph{cross-validation} techniques in this type of Random Forest model to get the best model. PySpark ''CrossValidator'' will analyze the values of the attributes. In this scenario, the ''CrossValidator'' will choose 3 values of attributes from 3*2*3 values. It will then try different combinations of the attribute values internally and finally, the model will get tuned to a final set of attributes which derive the best model with maximum accuracy. 
 
 The accuracy of the output of this model is 0.779
 Number of Trees are 100
@@ -506,6 +506,40 @@ As we identified the best model with maximum accuracy is the Random Forest model
 \section{Results}
 
 Now we have all the desired models created which can predict the class of a new customer. We can compare and analyze the outputs of each of these models and conclude with the best model. We can analyze the results based on accuracy and mean penalty matrix.
+
+\textit{Prediction matrix:} Prediction matrix can be extracted using the ''groupby'' option in PySpark. Figure \ref{fig:Figure22} and Figure \ref{fig:Figure23} shows the prediction matrix of Decision Tree and Random Forest respectively. Decision Tree has got 219 right predictions and Random Forest has got 240 right predictions out of 300 customer records.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure22.png}
+  \caption{Prediction matrix - Decision Tree}
+  \label{fig:Figure22} 
+\end{figure}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure23.png}
+  \caption{Prediction matrix - Random Forest}
+  \label{fig:Figure23} 
+\end{figure}
+
+\textit{Feature Importance:} Feature Importance is the list of important predictors that are the top contributed variables towards building the predictive model. Normally the variable with maximum dependency would be treated as the root note by the algorithm. We could calculate the feature importance only for the Random forest algorithm by using the class ''bestModel.featureImportances''. Figure \ref{fig:Figure24} shows the list of predictors. We could see that the variable ''Account Balance'' contributes maximum to the predictions. 
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure24.png}
+  \caption{Random Forest Important Predictors}
+  \label{fig:Figure24} 
+\end{figure}
+
+\textit{Model Accuracy Comparison:} Figure \ref{fig:Figure25} shows the accuracy of different predictive models that we created. We plotted the output of ''MultiClassifierEvaluator'' for Decision Tree and Random Forest. We can understand from the graph that baseline model 2 has got the least accuracy and Random Forest has got the most. 
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure25.png}
+  \caption{Model accuracy comparison}
+  \label{fig:Figure25} 
+\end{figure}
 
 \textit{Penalty Matrix:} One important aspect to consider while choosing a predictive model is the accuracy. When considering the actual goal of this project, the model should be apt to minimize the risks and to maximize the profit. The model should ensure good prediction accuracy to achieve the goal. 
 
@@ -525,22 +559,39 @@ A penalty matrix is defined to calculate the loss to the bank. Penalty will be a
   \end{tabular}
 \end{table}
 
-Table \ref{tab:table4} shows the penalty matrix. For right predictions penalty is 0. If a good customer predicted as bad, the penalty is 1 and if a bad customer predicted as good, the penalty is 5. The sum of the penalty values multiplied with the respective number of misclassified customers will provide the total amount of loss.
+Table \ref{tab:table4} shows the penalty matrix. For right predictions penalty is 0. If a good customer predicted as bad, the penalty is 1 and if a bad customer predicted as good, the penalty is 5. The sum of the penalty values multiplied with the respective number of misclassified customers will provide the total amount of loss/penalty.
+
+Figure \ref{fig:Figure26} shows the penalty comparison of different predictive models. Base model 1 has more chances of predicting bad customers as good because it blindly assumes that all the incoming customers are good. Hence it has got more penalty value. Base model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model2 has minimum penalty. 
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure26.png}
+  \caption{Model penalty comparison}
+  \label{fig:Figure26} 
+\end{figure}
+
+\textit{Accuracy and Penalty Comparison:} Figure \ref{fig:Figure27} shows the accuracy and penalty comparison for all the 4 models. Random Forest has the most accurate and with minimal penalty. Hence Random Forest is the best model out of all.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure27.png}
+  \caption{Model accuracy and penalty comparison}
+  \label{fig:Figure27} 
+\end{figure}
 
 \section{Discussion}
 
-
+We have built 4 predictive models. Baseline model 1 and 2, Decision Tree and Random Forest. We did a small study on Logistical Regression model as well. There are many other machine learning algorithms available which are suitable for classification analysis. Current analysis uses only 20 feature variables and 1000 customer records to populate the predictive models. In predictive analysis, how larger the training dataset better the outcome is. Current analysis can be extended to really big data with more feature variables customer records and also data from multiple years. data processing can be done using distributed big data processing systems available today for better accuracy. Unfortunately, such a large data is not publically available for studies in finance area right now. Hence we tried big data technologies in a comparatively smaller dataset. 
 
 
 \section{Conclusion}
 
-Out of 4 predictive models created as part of this project, Random Forest has the maximum accuracy in classifying the customers in the right class. Even if it gives an accuracy of around 85\% it is not an error free model. There are 15\% chances for misclassification. The size of the dataset that we considered to develop this model may have a direct impact. If we can train the model with a large data set with tens of thousands of customer records and feature variables, the accuracy may increase close to 100\%. There might be other more adcanced machine learning algorithms and tools coming up to explore the chances of increasing the overall accuracy of the predictive models in common.
+Out of 4 predictive models created as part of this project, Random Forest has the maximum accuracy in classifying the customers in the right class. Even if it gives an accuracy of around 85\% it is not an error free model. There are 15\% chances for misclassification. The size of the dataset that we considered to develop this model may have a direct impact. If we can train the model with a large data set with tens of thousands of customer records and feature variables, the accuracy may increase close to 100\%. There might be other more advanced machine learning algorithms and tools coming up to explore the chances of increasing the overall accuracy of the predictive models in common.
 
 
 \begin{acks}
 
-  The authors would like to thank Dr. Gregor von Laszewski for his
-  support and suggestions to write this paper.
+The author would like to thank Dr. Gregor von Laszewski, Juliette Zurick, Miao Jiang and Saber Sheybani Moghadam for their suggestions and support to complete this project and report.
 
 \end{acks}
 
@@ -550,12 +601,19 @@ Out of 4 predictive models created as part of this project, Random Forest has th
 \appendix
 
 \section{Project References}
+
+All project related documents are available in the github directory \cite{github}
+
 \subsection{Makefile}\label{Makefile}
 
-Make file is created assuming that the target system has Python3 installed already.
+Make file is created assuming that the target system has Ubuntu OS and Python3 installed already. This can be executed from Terminal window. It is available in the github directory \cite{code}
 
 \subsection{Data Set}
+
+Dataset ''credit-data.csv'' is available in the given Google Drive /project-data/hid328/credit-data.csv 
+
 \subsection{Project Code}\label{Project Code}
 
+Project code is available in the Jupyter notebook in the github directory \cite{code}
 
 \end{document}
