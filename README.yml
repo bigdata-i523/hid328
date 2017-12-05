@@ -29,7 +29,7 @@ paper2:
     title: Big Data Analytics in Data Center Network Monitoring
     type: latex
     url: https://github.com/bigdata-i523/hid328/paper2/report.tex
-Project:
+project:
     type: project
     author:
         - Dhanya Mathew
