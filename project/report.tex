@@ -165,7 +165,7 @@ All these installation steps are included in a make file referred in appendix \r
 
 We used the German Credit data which is publically available in the UCI Machine Learning Repository \cite{uci} and also in the website of PennState Eberly College of Science \cite{psu-site}. Both these sites have the cleaned dataset and not the original one. The dataset that we used (german-credit.csv) is taken from the website of PennState Eberly College of Science \cite{psu-site} and it is uploaded in the Github repository \cite{github}. We recreated the original one from these data sets to understand and try out the data cleaning processes. We start our project with the recreated original data set (credit-data.csv) which is available in the Github repository \cite{github}. 
 
-Dataset includes 1000 customer records with 20 feature variables and a class variable. In the class variable, the actual class of the customer is specified - good or bad. The complete list of data set variables and their description is given in Table \ref{tab:table1}. Figure \ref{fig:Figure5} shows the first 10 rows of the original data set.
+Dataset includes 1000 customer records with 20 feature variables and a class variable. In the class variable, the actual class of the customer is specified - good or bad. The complete list of data set variables and their description is given in Table \ref{tab:table1}. 
 
 \begin{table}
   \caption{Variables and description
@@ -201,16 +201,6 @@ Dataset includes 1000 customer records with 20 feature variables and a class var
 \end{table}
 
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure5.png}
-  \caption{First 10 rows of original data set
-  \cite{github}}
-  \label{fig:Figure5} 
-\end{figure}
-
-
-
 \section{Data Cleansing}
 
 A massive amount of raw data is piling up in the recent years from different sources and it has been continuously getting stored as the storage mechanism is getting cheaper and the storage capacity increases day by day. This raw data cannot be analysed as it is by human or traditional applications, as the processing capacity of traditional tools has been exceeded because of the volume of the data. That is the reason why big data technologies have evolved and they use distributed systems like MapReduce, Spark, Flink etc. Even if we have a big data solution to process the high quantity of raw data, it is not the efficiency and performance of the solution that determines the quality of the knowledge extracted but it depends on the quality of the data as well. The raw data likely to be imperfect and may contain noise, irrelevant information, missing values etc. It is well known that low quality data will lead to low quality knowledge \cite{preprocessing}. Hence data cleaning is the major step to be performed before we continue with data mining algorithms to make sure that we are using a suitable and relevant data set. 
@@ -219,37 +209,29 @@ Data cleaning has 2 parts. First part is data preparation and second part is dat
 
 \subsubsection{Data Preparation}
 
-The data going to the analytics model should be clean and noise free. Hence data preparation part includes tasks like data cleaning, data normalization, data transformation, missing value imputation, data integration and Noise identification. Figure \ref{fig:Figure6} shows the data preparations tasks \cite{preprocessing}.
+The data going to the analytics model should be clean and noise free. Hence data preparation part includes tasks like data cleaning, data normalization, data transformation, missing value imputation, data integration and Noise identification. Figure \ref{fig:Figure5} shows the data preparations tasks \cite{preprocessing}.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure6.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure5.png}
   \caption{Data Preprocessing and preparation tasks
   \cite{preprocessing}}
-  \label{fig:Figure6} 
+  \label{fig:Figure5} 
 \end{figure}
 
 \subsubsection{Data Reduction Techniques}
 
-To reduce the dimensionality problem and the computational cost, because of a large number of variables and instances in the data set, we try to gather only the required set of quality data. Data reduction techniques include feature selection, instance selection and discretization. Figure \ref{fig:Figure7} shows data reduction techniques \cite{preprocessing}
+To reduce the dimensionality problem and the computational cost, because of a large number of variables and instances in the data set, we try to gather only the required set of quality data. Data reduction techniques include feature selection, instance selection and discretization. Figure \ref{fig:Figure6} shows data reduction techniques \cite{preprocessing}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure7.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure6.png}
   \caption{Data Reduction Approaches
   \cite{preprocessing}}
-  \label{fig:Figure7} 
+  \label{fig:Figure6} 
 \end{figure}
 
-With respect to our chosen data set, data reduction techniques were already applied to the raw data and 1000 customer records and 21 variables were shortlisted. All these variables are either categorical (like Account-Balance, Previous-credit, purpose etc) or continuous (Duration-of-credit, Installment-percent, dependents). As part of data preparation for our analysis, we transform the values of categorical variable's from string to scores (numerical values). For example, the variable creditability got 2 values - good and bad. After transformation process, ''good'' get replaced by ''1'' and ''bad'' get replaced by ''0''. Likewise, we gave scores for the values of the variables, Foreign-Worker, Telephone, Previous-Credit, Purpose, Sex-MaritalStatus, Guarantors and Type-apartment. Figure \ref{fig:Figure8} shows first 10 rows from the cleaned data set. 
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure8.png}
-  \caption{First 10 rows of cleaned data set
-  \cite{psu-site}}
-  \label{fig:Figure8} 
-\end{figure}
+With respect to our chosen data set, data reduction techniques were already applied to the raw data and 1000 customer records and 21 variables were shortlisted. All these variables are either categorical (like Account-Balance, Previous-credit, purpose etc) or continuous (Duration-of-credit, Installment-percent, dependents). As part of data preparation for our analysis, we transform the values of categorical variable's from string to scores (numerical values). For example, the variable creditability got 2 values - good and bad. After transformation process, ''good'' get replaced by ''1'' and ''bad'' get replaced by ''0''. Likewise, we gave scores for the values of the variables, Foreign-Worker, Telephone, Previous-Credit, Purpose, Sex-MaritalStatus, Guarantors and Type-apartment.
 
 
 \section{Data Analysis}
@@ -264,74 +246,74 @@ Exploratory analysis is basically to explore the data and understand what it act
 
 After data preprocessing, our dataset includes 1000 customer records with 20 feature variable and 1 class variable. Feature variable values can be visualized to understand the characteristics and how they are related to each other - proportionally or inversely. 
 
-Figure \ref{fig:Figure9} shows the histogram of credit amount disbursed with respect to frequency. From this diagram, we understand that most of the customers arevrequested for loans for up to 2500 German Marks. The number of customers decreases as the loan amount increases. And very few customers fall under the loan amount category over 10000 German Marks. 
+Figure \ref{fig:Figure7} shows the histogram of credit amount disbursed with respect to frequency. From this diagram, we understand that most of the customers arevrequested for loans for up to 2500 German Marks. The number of customers decreases as the loan amount increases. And very few customers fall under the loan amount category over 10000 German Marks. 
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure7.png}
+  \caption{Credit amount vs. Frequency}
+  \label{fig:Figure7} 
+\end{figure}
+
+Figure \ref{fig:Figure8} and Figure \ref{fig:Figure9} shows the credit amount availed by bad customers and good customers respectively. The trend is almost the same. Maximum customers from both the classes fall under the category of up to 2500 German Marks. But there is a noticeable difference in the number of customers under 12500 range. Bad rated customers are more in this category.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure8.png}
+  \caption{Credit amount vs. bad customers}
+  \label{fig:Figure8} 
+\end{figure}
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure9.png}
-  \caption{Credit amount vs. Frequency}
+  \caption{Credit amount vs. good customers}
   \label{fig:Figure9} 
 \end{figure}
 
-Figure \ref{fig:Figure10} and Figure \ref{fig:Figure11} shows the credit amount availed by bad customers and good customers respectively. The trend is almost the same. Maximum customers from both the classes fall under the category of up to 2500 German Marks. But there is a noticeable difference in the number of customers under 12500 range. Bad rated customers are more in this category.
+Figure \ref{fig:Figure10} shows the duration of credit in months vs. number of customers. From this graph, we can understand that maximum number of customers opted for 10 to 15 months duration.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure10.png}
-  \caption{Credit amount vs. bad customers}
-  \label{fig:Figure10} 
+  \caption{Duration of credit in months vs. frequency}
+  \label{fig:Figure10}
 \end{figure}
+
+Figure \ref{fig:Figure11} and Figure \ref{fig:Figure12} shows the duration of credit in months vs number of bad customers and good customers respectively. It shows that there is not much difference in the trend.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure11.png}
-  \caption{Credit amount vs. good customers}
+  \caption{Duration of credit in months vs. bad customers}
   \label{fig:Figure11} 
 \end{figure}
-
-Figure \ref{fig:Figure12} shows the duration of credit in months vs. number of customers. From this graph, we can understand that maximum number of customers opted for 10 to 15 months duration.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure12.png}
-  \caption{Duration of credit in months vs. frequency}
-  \label{fig:Figure12}
+  \caption{Duration of credit in months vs. good customers}
+  \label{fig:Figure12} 
 \end{figure}
 
-Figure \ref{fig:Figure13} and Figure \ref{fig:Figure14} shows the duration of credit in months vs number of bad customers and good customers respectively. It shows that there is not much difference in the trend.
+Figure \ref{fig:Figure13} shows how customers are scattered with respect to age. Most of the borrowers fall under the age group of 23 to 28.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure13.png}
-  \caption{Duration of credit in months vs. bad customers}
-  \label{fig:Figure13} 
-\end{figure}
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure14.png}
-  \caption{Duration of credit in months vs. good customers}
-  \label{fig:Figure14} 
-\end{figure}
-
-Figure \ref{fig:Figure15} shows how customers are scattered with respect to age. Most of the borrowers fall under the age group of 23 to 28.
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure15.png}
   \caption{Age vs. frequency}
-  \label{fig:Figure15} 
+  \label{fig:Figure13} 
 \end{figure}
 
 \subsubsection{Data Classification}\label{Data Classification}
 
-We have one class variable ''Creditability'' to classify the customers based on the bank's opinion on the actual applicants. We could extract this class information from dataset using PySpark Python script ''GroupBy''. Figure \ref{fig:Figure16} shows the output of the script.
+We have one class variable ''Creditability'' to classify the customers based on the bank's opinion on the actual applicants. We could extract this class information from dataset using PySpark Python script ''GroupBy''. Figure \ref{fig:Figure14} shows the output of the script.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure16.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure14.png}
   \caption{Data classification}
-  \label{fig:Figure16} 
+  \label{fig:Figure14} 
 \end{figure}
 
 Customers in our dataset are classified into 2 classes - Good (1 = Creditworthy) and Bad (0 = Uncreditworthy). We have 700 customers in the Good class and 300 customers in the Bad class. We divide our dataset of 1000 customer records randomly into 2 parts. First part is the training dataset with 700 customer records and second part is the test dataset of 300 customer records.
@@ -343,31 +325,31 @@ Interquartile Range is a statistical method to measure the variability of the da
 
 We used pandas quantile function to extract this information for all the continuous variables.
 
-Figure \ref{fig:Figure17} shows the variability of Credit-Amount.
+Figure \ref{fig:Figure15} shows the variability of Credit-Amount.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure15.png}
+  \caption{Variability in Credit-Amount}
+  \label{fig:Figure15} 
+\end{figure}
+
+Figure \ref{fig:Figure16} shows the variability of Duration of credit.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure16.png}
+  \caption{Variability of Duration of credit}
+  \label{fig:Figure16} 
+\end{figure}
+
+Figure \ref{fig:Figure17} shows the variability of Age.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure17.png}
-  \caption{Variability in Credit-Amount}
-  \label{fig:Figure17} 
-\end{figure}
-
-Figure \ref{fig:Figure18} shows the variability of Duration of credit.
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure18.png}
-  \caption{Variability of Duration of credit}
-  \label{fig:Figure18} 
-\end{figure}
-
-Figure \ref{fig:Figure19} shows the variability of Age.
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure19.png}
   \caption{Variability of Age}
-  \label{fig:Figure19} 
+  \label{fig:Figure17} 
 \end{figure}
 
 \subsubsection{Cross-Tabulation}
@@ -376,13 +358,13 @@ Cross-Tabulation is a statistical method used to compare the relationship betwee
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure20.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure18.png}
   \caption{Contingency table of sex-marital status
   \cite{psu-site}}
-  \label{fig:Figure20} 
+  \label{fig:Figure18} 
 \end{figure}
 
-Figure \ref{fig:Figure20} shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married / widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
+Figure \ref{fig:Figure18} shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married / widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
 
 \subsubsection{Test of Independence}
 
@@ -403,13 +385,13 @@ If the calculated value is small that means, the variables are related. If the v
 Degrees of freedom=(r-1)*(c-1)
 \end{equation}
 
-The calculated values are shown in figure \ref{fig:Figure21}.
+The calculated values are shown in figure \ref{fig:Figure19}.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure21.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure19.png}
   \caption{Chi-square, df and p values}
-  \label{fig:Figure21} 
+  \label{fig:Figure19} 
 \end{figure}
 
 \section{Models}
@@ -504,41 +486,49 @@ As we identified the best model with maximum accuracy is the Random Forest model
 
 Now we have all the desired models created which can predict the class of a new customer. We can compare and analyze the outputs of each of these models and conclude with the best model. We can analyze the results based on accuracy and mean penalty matrix.
 
-\textit{Prediction matrix:} Prediction matrix can be extracted using the ''groupby'' option in PySpark. Figure \ref{fig:Figure22} and Figure \ref{fig:Figure23} shows the prediction matrix of Decision Tree and Random Forest respectively. Decision Tree has got 219 right predictions and Random Forest has got 240 right predictions out of 300 customer records.
+\subsection{Prediction matrix} 
+
+Prediction matrix can be extracted using the ''groupby'' option in PySpark. Figure \ref{fig:Figure20} and Figure \ref{fig:Figure21} shows the prediction matrix of Decision Tree and Random Forest respectively. Decision Tree has got 219 right predictions and Random Forest has got 240 right predictions out of 300 customer records.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure20.png}
+  \caption{Prediction matrix - Decision Tree}
+  \label{fig:Figure20} 
+\end{figure}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure21.png}
+  \caption{Prediction matrix - Random Forest}
+  \label{fig:Figure21} 
+\end{figure}
+
+\subsection{Feature Importance} 
+
+Feature Importance is the list of important predictors that are the top contributed variables towards building the predictive model. Normally the variable with maximum dependency would be treated as the root node by the algorithm. We could calculate the feature importance only for the Random forest algorithm by using the class ''bestModel.featureImportances''. Figure \ref{fig:Figure22} shows the list of predictors. We could see that the variable ''Account Balance'' contributes maximum to the predictions. 
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure22.png}
-  \caption{Prediction matrix - Decision Tree}
+  \caption{Random Forest Important Predictors}
   \label{fig:Figure22} 
 \end{figure}
+
+\subsection{Model Accuracy Comparison} 
+
+Figure \ref{fig:Figure23} shows the accuracy of different predictive models that we created. We plotted the output of ''MulticlassClassificationEvaluator'' for Decision Tree and Random Forest. We can understand from the graph that baseline model 2 has got the least accuracy and Random Forest has got the most. 
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure23.png}
-  \caption{Prediction matrix - Random Forest}
+  \caption{Model accuracy comparison}
   \label{fig:Figure23} 
 \end{figure}
 
-\textit{Feature Importance:} Feature Importance is the list of important predictors that are the top contributed variables towards building the predictive model. Normally the variable with maximum dependency would be treated as the root node by the algorithm. We could calculate the feature importance only for the Random forest algorithm by using the class ''bestModel.featureImportances''. Figure \ref{fig:Figure24} shows the list of predictors. We could see that the variable ''Account Balance'' contributes maximum to the predictions. 
+\subsection{Penalty Matrix} 
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure24.png}
-  \caption{Random Forest Important Predictors}
-  \label{fig:Figure24} 
-\end{figure}
-
-\textit{Model Accuracy Comparison:} Figure \ref{fig:Figure25} shows the accuracy of different predictive models that we created. We plotted the output of ''MulticlassClassificationEvaluator'' for Decision Tree and Random Forest. We can understand from the graph that baseline model 2 has got the least accuracy and Random Forest has got the most. 
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure25.png}
-  \caption{Model accuracy comparison}
-  \label{fig:Figure25} 
-\end{figure}
-
-\textit{Penalty Matrix:} One important aspect to consider while choosing a predictive model is the accuracy. When considering the actual goal of this project, the model should be apt to minimize the risks and to maximize the profit. The model should ensure good prediction accuracy to achieve the goal. 
+One important aspect to consider while choosing a predictive model is the accuracy. When considering the actual goal of this project, the model should be apt to minimize the risks and to maximize the profit. The model should ensure good prediction accuracy to achieve the goal. 
 
 A penalty matrix is defined to calculate the loss to the bank. Penalty will be applied to each misclassifications and penalty value differs for wrong classifications - 'good as bad' and 'bad as good'. As discussed in the project goals section \ref{Project goals}, approving loan for an uncreditworthy customer will end up in more financial loss for the bank and accordingly is a greater risk. Hence classifying a bad customer wrongly as good customer will have more penalty.  
 
@@ -558,22 +548,24 @@ A penalty matrix is defined to calculate the loss to the bank. Penalty will be a
 
 Table \ref{tab:table4} shows the penalty matrix. For right predictions penalty is 0. If a good customer predicted as bad, the penalty is 1 and if a bad customer predicted as good, the penalty is 5. The sum of the penalty values multiplied with the respective number of misclassified customers will provide the total amount of loss / penalty.
 
-Figure \ref{fig:Figure26} shows the penalty comparison of different predictive models. Base model 1 has more chances of predicting bad customers as good because it blindly assumes that, all the incoming customers are good. Hence it has got more penalty value. Base model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model2 has minimum penalty. 
+Figure \ref{fig:Figure24} shows the penalty comparison of different predictive models. Base model 1 has more chances of predicting bad customers as good because it blindly assumes that, all the incoming customers are good. Hence it has got more penalty value. Base model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model2 has minimum penalty. 
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure26.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure24.png}
   \caption{Model penalty comparison}
-  \label{fig:Figure26} 
+  \label{fig:Figure24} 
 \end{figure}
 
-\textit{Accuracy and Penalty Comparison:} Figure \ref{fig:Figure27} shows the accuracy and penalty comparison for all the 4 models. Random Forest is the most accurate model and with minimal penalty. Hence Random Forest is the best model out of all.
+\subsection{Accuracy and Penalty Comparison} 
+
+Figure \ref{fig:Figure25} shows the accuracy and penalty comparison for all the 4 models. Random Forest is the most accurate model and with minimal penalty. Hence Random Forest is the best model out of all.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure27.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure25.png}
   \caption{Model accuracy and penalty comparison}
-  \label{fig:Figure27} 
+  \label{fig:Figure25} 
 \end{figure}
 
 \section{Discussion}
