@@ -23,7 +23,7 @@
 
 
 \begin{abstract}
-Banks often want to know the profile of their profitable top 1\% or 20\% customers looks like. Conversely, they may also wonder what the general profile is of the customers in the worst 1\% and 20\% of profit. Based on customer's data variables at any given time, a good predictive model can predict which profit group (extremely unprofitable, average, extremely profitable, etc.) customers fall into. This helps financial institutions to better understand what drives the customer profit and accordingly take decisions to sell their products to the right customers. Further down in banking sector, it is a challenge to identify customers who are most likely to repay the loan. Recent big data and machine learning technologies have the potential to predict good customers and open doors for banks to profitable growth. Since the banking sector has evolved over the periods, there are tremendous amount of historical data available to analyze. We show how bank's big data can be analyzed and create a model based on that, to classify customers. In addition to big data technologies, we use machine learning algorithms to build a predictive model to predict creditworthy and uncreditworthy customers from a list of new customers. Random forest classification algorithm is used to achieve this goal.
+Banks often want to know the profile of their profitable top 1\% or 20\% customers looks like. Conversely, they may also wonder what the general profile is of the customers in the worst 1\% and 20\% of profit. Based on customer's data variables at any given time, a good predictive model can predict which profit group (extremely unprofitable, average, extremely profitable, etc.) customers fall into. This helps financial institutions to better understand what drives the customer profit and accordingly take decisions to sell their products to the right customers. Further down in banking sector, it is a challenge to identify customers who are most likely to repay the loan. Recent big data and machine learning technologies have the potential to predict good customers and open doors for banks to profitable growth. Since the banking sector has evolved over the periods, there are tremendous amount of historical data available to analyze. We show how bank's big data can be analyzed and create a model based on that, to classify customers. In addition to big data technologies, we use machine learning algorithms to build a predictive model to predict creditworthy and uncreditworthy customers from a list of new customers. Various classification algorithms like Decision Tree and Random Forest are used to build the models and trace the best model among them to achieve the goal.
 
 \end{abstract}
 
@@ -42,18 +42,18 @@ The finance sector contributes to the daily data generation from products and ma
 
 \subsection{Project Goals}\label{Project goals}
 
-This project aims to help banking sector to identify trustworthy customers. Specifically, help banks to take a decision driven by data, whether to approve or reject a loan application. When a new customer approaches the bank for a loan, banks would be able to identify the customers who are most likely to repay the loan by analyzing the applicant's profile and background information. 
+We aim to help banking sector to identify trustworthy customers. Specifically, help banks to take a decision driven by data, whether to approve or reject a loan application. When a new customer approaches the bank for a loan, banks would be able to identify the customers who are most likely to repay the loan by analyzing the applicant's profile and background information. 
 
-There can be two scenarios of risks associated with the bank's decision. First, if the customer is creditworthy and if the bank rejects the loan, then it is a loss to the bank in terms of interest. Second, if the customer is uncreditworthy and if the bank approves the loan, then it is a loss to the bank in terms of loan amount and interest \cite{psu-site}. Approving loan for an uncreditworthy customer will end up in more financial loss for the bank and accordingly is a greater risk. Hence banks would require a decision rule to follow for whom to approve the loan. With our model, we are trying to mitigate these risks for the banks and contribute to the decision rules. In other words, our model helps to minimize the risks and maximize the profit by understanding the customers.
+There can be two scenarios of risks associated with the bank's decision. First, if the customer is creditworthy and if the bank rejects the loan, then it is a loss to the bank in terms of interest. Second, if the customer is uncreditworthy and if the bank approves the loan, then it is a loss to the bank in terms of loan amount and interest \cite{psu-site}. Approving loan for an uncreditworthy customer will end up in more financial loss for the bank and accordingly is a greater risk. Hence banks would require a decision rule to follow for whom to approve the loan. We show how to build a predictive model using machine learning algorithm and a sample dataset with customer records classified as ''Good'' or ''Bad'' according to bank's opinion on the customer. With our model, we try to mitigate these risks for the banks by contributing to the decision rules. In other words, our model helps to minimize the risks and maximize the profit for the bank by understanding the customers.
 
 \subsection{Methods and Technologies Involved}\label{Methods and Technologies Involved}
 
-The goal of most of the big data projects is to analyze the Data and derive knowledge out of it. In other words, data is the input to the model and knowledge is the output. We also follow the same methods and processes for our project. We wrote the project code using Python3. 
+The goal of most of the big data projects is to analyze the data and derive knowledge out of it. In other words, data is the input to the model and knowledge is the output. We also follow the same methods and processes for our project. We wrote the project code using Python3. 
 
-\subsubsection{Project Workflow:}
+\subsubsection{Project Workflow}
 
 Overall workflow of the project is shown in Figure \ref{fig:Figure1}. 
-For this project, we have taken a sample data set of loan applications received by a bank. We explored the data and the requirements of the bank and based on that set the project goals as discussed in the section \ref{Project goals} before starting the project. In the real scenarios, we will not be able to apply analytical methods directly on the raw data as it likely be imperfect and containing irrelevant information. Hence we do data cleaning (data preprocessing) as the first step. We did data cleaning using PySpark. The cleaned data has 1000 customer records with 1 classifier and 20 feature variables.
+We have taken a sample data set of loan applications received by a bank. We explored the data and the requirements of the bank and based on that set the project goals as discussed in the section \ref{Project goals}, before starting the project. In the real scenarios, we will not be able to apply analytical methods directly on the raw data as it likely be imperfect and containing irrelevant information. Hence we do data cleaning (data preprocessing) as the first step. Data cleaning is done using PySpark. The cleaned data has 1000 customer records with 1 classifier and 20 feature variables.
 
 \begin{figure}[htb]
   \centering
@@ -63,11 +63,11 @@ For this project, we have taken a sample data set of loan applications received 
   \label{fig:Figure1} 
 \end{figure}
 
-Exploratory analysis like Chi-square test is done to understand the data and feature selection for analysis as part data mining process. We have done graphical representations to show how the actual data is related and what are the direct insights available from the cleaned data set.
+Exploratory analysis like Chi-square test is done to understand the data and feature selection for analysis as part of the data mining process. We have done graphical representations to show how the actual data is related and what are the direct insights available from the cleaned data set.
 
 Machine learning approaches are used for the data evaluation and to build our predictive model. We develop various models using machine learning algorithms and compare them to identify the best model to choose for our problem solution \cite{sas-machine-learning}. To develop the models we first split the data set into two parts- training data and test data. We defined 2 baseline models, Decision trees and the Random Forest model.  We compare all these models to identify the most effective and least penalty model. We use python as the programming language to build these models and display visualizations for easy comparison and results discussion.
 
-\subsubsection{Python:}
+\subsubsection{Python}
 
 Python version 3 is the programming language used to develop the models and visualizations in this project. Python is a general purpose programming language that is open source, easy to use, faster to write, flexible and powerful. It has a rich set of libraries and utilities for data processing and analytics tasks \cite{python-important-big-data-analytics-applications}. Other important features of Python include the ability to process big data, scalability of applications and easiness to integrate with web applications. 
 We use Python libraries like pandas, matplotlib, seaborn and numpy in this project.
@@ -80,19 +80,19 @@ We use Python libraries like pandas, matplotlib, seaborn and numpy in this proje
 
 \textit{Numpy:} Numpy is Python library which is used to operate mathematical functions on large multi dimensional arrays \cite{numpy}. 
 
-\subsubsection{PySpark:}
+\subsubsection{PySpark}
 
 Even though Python is powerful to handle complex big data analytic tasks, it alone cannot handle the big data processing. A distributed framework would require to handle a large amount of data. Spark is a distributed computing framework which supports Python \cite{pyspark}.
 
-PySpark is used to carry out the data preprocessing tasks in this project. it is the Python API for Spark.
+PySpark is used to carry out the data preprocessing tasks in this project and it is the Python API for Spark.
 
-\subsubsection{Jupyter Notebook:}
+\subsubsection{Jupyter Notebook}
 
 Jupyter notebook is an open source web application that allows to edit, run and share Python code and visualizations into a web view. It can be used to modify and re-execute program parts in a flexible way \cite{jupyter}. The files created in Jupyter notebook use extension ''ipynb''. 
 
-\subsubsection{Machine Learning:}
+\subsubsection{Machine Learning}
 
-Machine learning enables computers to learn automatically and act accordingly without human assistance or being explicitly programmed. It is an application of Artificial Intelligence. It focuses on computer programs that can access data and learn by itself. Learning process starts by observing the data for patterns and make better decisions in future on the given scenarios \cite{machine-learning}. There are mainly 2 categories of machine learning - Supervised and unsupervised.
+Machine learning enables computers to learn automatically and act accordingly without human assistance or being explicitly programmed. It is an application of Artificial Intelligence. It focuses on computer programs that can access data and learn by itself. Learning process starts by observing the data for patterns and make better decisions in future on the given scenarios \cite{machine-learning}. There are mainly 2 categories of machine learning - Supervised and Unsupervised.
 
 \textit{Supervised Machine Learning Algorithms:} Supervised machine learning algorithms enable machines to get trained using a known training data set. Using these labeled examples, supervised learning algorithms can predict future events by applying already learned knowledge. These systems can be used for target definitions for new set of data after required training. Also, it can compare new data input with the intended output and give error indications \cite{machine-learning}. 
 
@@ -104,7 +104,7 @@ We use supervised machine learning approaches in this project. In particular, th
 
 \subsubsection{Decision Tree}\label{Decision Tree}
 
-Decision Tree is a supervised machine learning algorithm used to solve both classification and regression problems. In decision tree, a trained model with a set of rules will be created based on the training data. The target class or value of a test/new data set will be predicted based on this training rules. Decision Tree algorithm is simple to understand as it uses a tree model representation to solve the problem. It starts from a root node and continues with other decision nodes. Each internal decision nodes corresponds to the feature variables and each leaf nodes corresponds to the class label \cite{decision-tree}. Figure \ref{fig:Figure2} shows the decision tree classifier. 
+Decision Tree is a supervised machine learning algorithm used to solve both classification and regression problems. In decision tree, a trained model with a set of rules will be created based on the training data. The target class or value of a test / new data set will be predicted based on this training rules. Decision Tree algorithm is simple to understand as it uses a tree model representation to solve the problem. It starts from a root node and continues with other decision nodes. Each internal decision nodes corresponds to the feature variables and each leaf nodes corresponds to the class label \cite{decision-tree}. Figure \ref{fig:Figure2} shows the decision tree classifier. 
 
 
 \begin{figure}[htb]
@@ -117,7 +117,7 @@ Decision Tree is a supervised machine learning algorithm used to solve both clas
 
 The best attribute will be chosen as the root node. To identify the root node there are 2 methods. They are, \emph{Information Gain} and \emph{Gini Index}. There are statistical approaches to calculate Information gain and Gini index values for each feature variables. Attribute with better value will be considered as the root node and other attributes will be placed in the internal nodes according to the values in recursive order. Step 1 to model the decision tree is placing the root attribute. In step 2, the training data set will be divided into 2 sub data sets in such a way that, both subsets will contain same attribute values for that variable. Step 1 and 2 will be repeated until we reach the leaf nodes with predicted class value \cite{decision-tree}.
 
-\textit{Overfitting:} Overfitting is a practical issue that can happen while building a decision tree. When the algorithm goes deeper and deeper it builds more branches because of the irregularities in data and the prediction accuracy of the model goes down accordingly. There are 2 methods can be used to avoid overfitting issues - \emph{Pre-Pruning} and \emph{Post-Pruning}. In Pre-pruning, we set a threshold value as a goodness measure and if it crosses, further split of the node will be stopped. In Post-Pruning, tree construction continues until all leafs are reached. Pruning will be done if the model shows overfitting issues. Cross-validation data will be used to measure the improvement in this method \cite{decision-tree}.
+\textit{Overfitting:} Overfitting is a practical issue that can happen while building a decision tree. When the algorithm goes deeper and deeper it builds more branches because of the irregularities in data and the prediction accuracy of the model goes down accordingly. There are 2 methods can be used to avoid overfitting issues - \emph{Pre-Pruning} and \emph{Post-Pruning}. In Pre-pruning, we set a threshold value as a goodness measure and if it crosses, further split of the node will be stopped. In Post-Pruning, tree construction continues until all leafs are reached and pruning will be done if the model shows overfitting issues. Cross-validation data will be used to measure the improvement in this method \cite{decision-tree}.
 
 \subsubsection{Random Forest}\label{Random Forest}
 
@@ -146,7 +146,7 @@ The test data set will be analyzed against the rules developed by each of the tr
 
 \subsection{Installations}
 
-Technologies used in this project are discussed in detail in section \ref{Methods and Technologies Involved}. The installation commands on Ubuntu 16.04 OS for each of these technologies are given in this section. Installations can be done from the Terminal window. 
+Technologies used in this project are discussed in detail in section \ref{Methods and Technologies Involved}. The installation commands on Ubuntu 16.04 OS for each of these technologies are given in this section. Installations can be done from the terminal window. 
 
 \begin{enumerate}
   \item Python installation steps for ubuntu OS are available in the askubuntu website \cite{python-installations}.
@@ -163,7 +163,7 @@ All these installation steps are included in a make file referred in appendix \r
 
 \section{Data Set}
 
-We used the German Credit data which is publically available in the UCI Machine Learning Repository \cite{uci} and also in the website of PennState Eberly College of Science \cite{psu-site}. Both these sites have the cleaned dataset and not the original one. The dataset that we used in this project (german-credit.csv) is taken from the website of PennState Eberly College of Science \cite{psu-site} and it is uploaded in the Github repository \cite{github}. We recreated the original one from these data sets to understand and try out the data cleaning processes. We start our project with the recreated original data set (credit-data.csv) which is available in the Github repository \cite{github}. 
+We used the German Credit data which is publically available in the UCI Machine Learning Repository \cite{uci} and also in the website of PennState Eberly College of Science \cite{psu-site}. Both these sites have the cleaned dataset and not the original one. The dataset that we used (german-credit.csv) is taken from the website of PennState Eberly College of Science \cite{psu-site} and it is uploaded in the Github repository \cite{github}. We recreated the original one from these data sets to understand and try out the data cleaning processes. We start our project with the recreated original data set (credit-data.csv) which is available in the Github repository \cite{github}. 
 
 Dataset includes 1000 customer records with 20 feature variables and a class variable. In the class variable, the actual class of the customer is specified - good or bad. The complete list of data set variables and their description is given in Table \ref{tab:table1}. Figure \ref{fig:Figure5} shows the first 10 rows of the original data set.
 
@@ -241,7 +241,7 @@ To reduce the dimensionality problem and the computational cost, because of a la
   \label{fig:Figure7} 
 \end{figure}
 
-With respect to our chosen data set, data reduction techniques were already applied to the raw data and 1000 customer records and 21 variables were shortlisted. All these variables are either categorical (like Account-Balance, Previous-credit, purpose etc) or continuous (Duration-of-credit, Installment-percent, dependents). As part of data preparation for our analysis, we transformed the values of categorical variable's from string to scores (numerical values). For example, the variable creditability got 2 values - good and bad. After transformation process, ''good'' got replaced by ''1'' and ''bad'' got replaced by ''0''. Likewise, we gave scores for the values of the variables, Foreign-Worker, Telephone, Previous-Credit, Purpose, Sex-MaritalStatus, Guarantors and Type-apartment. Figure \ref{fig:Figure8} shows first 10 rows from the cleaned data set. 
+With respect to our chosen data set, data reduction techniques were already applied to the raw data and 1000 customer records and 21 variables were shortlisted. All these variables are either categorical (like Account-Balance, Previous-credit, purpose etc) or continuous (Duration-of-credit, Installment-percent, dependents). As part of data preparation for our analysis, we transform the values of categorical variable's from string to scores (numerical values). For example, the variable creditability got 2 values - good and bad. After transformation process, ''good'' get replaced by ''1'' and ''bad'' get replaced by ''0''. Likewise, we gave scores for the values of the variables, Foreign-Worker, Telephone, Previous-Credit, Purpose, Sex-MaritalStatus, Guarantors and Type-apartment. Figure \ref{fig:Figure8} shows first 10 rows from the cleaned data set. 
 
 \begin{figure}[htb]
   \centering
@@ -254,7 +254,7 @@ With respect to our chosen data set, data reduction techniques were already appl
 
 \section{Data Analysis}
 
-Big data analysis is the process of obtaining knowledge by analyzing and understanding hidden patterns, market trends, unknown correlations, customer preferences and other relevant information from large and varied datasets \cite{bigdata-analytics}. Big data analytics methods include exploratory analysis, data mining, predictive analytics, machine learning, deep learning etc. The results of the analysis can be visualized using tools like Tableau, Infogram, Plotly etc or by using python scripts. This project utilizes methods like exploratory analysis, predictive analysis, machine learning algorithms and visualizations of results using python scripts. Python codes for all these analysis methods are given in appendix \ref{Project Code}.
+Big data analysis is the process of obtaining knowledge by analyzing and understanding hidden patterns, market trends, unknown correlations, customer preferences and other relevant information from large and varied datasets \cite{bigdata-analytics}. Big data analytics methods include exploratory analysis, data mining, predictive analytics, machine learning, deep learning etc. The results of the analysis can be visualized using tools like Tableau, Infogram, Plotly etc or by using Python scripts. This project utilizes methods like exploratory analysis, predictive analysis, machine learning algorithms and visualizations of results using Python scripts. Python codes for all these analysis methods are given in appendix \ref{Project Code}.
 
 \subsection{Exploratory Analysis}
 
@@ -264,7 +264,7 @@ Exploratory analysis is basically to explore the data and understand what it act
 
 After data preprocessing, our dataset includes 1000 customer records with 20 feature variable and 1 class variable. Feature variable values can be visualized to understand the characteristics and how they are related to each other - proportionally or inversely. 
 
-Figure \ref{fig:Figure9} shows the histogram of credit amount disbursed with respect to frequency. From this diagram, we understand that most of the customers requested for loans for up to 2500 German Marks. The number of customers decreases as the loan amount increases. And very few customers fall under the loan amount category over 10000 German Marks. 
+Figure \ref{fig:Figure9} shows the histogram of credit amount disbursed with respect to frequency. From this diagram, we understand that most of the customers arevrequested for loans for up to 2500 German Marks. The number of customers decreases as the loan amount increases. And very few customers fall under the loan amount category over 10000 German Marks. 
 
 \begin{figure}[htb]
   \centering
@@ -273,7 +273,7 @@ Figure \ref{fig:Figure9} shows the histogram of credit amount disbursed with res
   \label{fig:Figure9} 
 \end{figure}
 
-Figure \ref{fig:Figure10} and Figure \ref{fig:Figure11} shows the credit amount availed by bad customers and good customers respectively. The trend is almost same that, maximum customers from both the classes fall under the category of up to 2500 German Marks. But there is a noticeable difference in the number of customers under 12500 range. Bad rated customers are more in this category.
+Figure \ref{fig:Figure10} and Figure \ref{fig:Figure11} shows the credit amount availed by bad customers and good customers respectively. The trend is almost the same. Maximum customers from both the classes fall under the category of up to 2500 German Marks. But there is a noticeable difference in the number of customers under 12500 range. Bad rated customers are more in this category.
 
 \begin{figure}[htb]
   \centering
@@ -298,7 +298,7 @@ Figure \ref{fig:Figure12} shows the duration of credit in months vs. number of c
   \label{fig:Figure12}
 \end{figure}
 
-Figure \ref{fig:Figure13} and Figure \ref{fig:Figure14} shows the duration of credit in months vs number of customer bad customers and good customers respectively. It shows that there is not much difference in the trend.
+Figure \ref{fig:Figure13} and Figure \ref{fig:Figure14} shows the duration of credit in months vs number of bad customers and good customers respectively. It shows that there is not much difference in the trend.
 
 \begin{figure}[htb]
   \centering
@@ -323,7 +323,7 @@ Figure \ref{fig:Figure15} shows how customers are scattered with respect to age.
   \label{fig:Figure15} 
 \end{figure}
 
-\subsubsection{Data Classification}\label{Data Classification}:
+\subsubsection{Data Classification}\label{Data Classification}
 
 We have one class variable ''Creditability'' to classify the customers based on the bank's opinion on the actual applicants. We could extract this class information from dataset using PySpark Python script ''GroupBy''. Figure \ref{fig:Figure16} shows the output of the script.
 
@@ -337,7 +337,7 @@ We have one class variable ''Creditability'' to classify the customers based on 
 Customers in our dataset are classified into 2 classes - Good (1 = Creditworthy) and Bad (0 = Uncreditworthy). We have 700 customers in the Good class and 300 customers in the Bad class. We divide our dataset of 1000 customer records randomly into 2 parts. First part is the training dataset with 700 customer records and second part is the test dataset of 300 customer records.
 
 
-\subsubsection{Interquartile Range}:
+\subsubsection{Interquartile Range}
 
 Interquartile Range is a statistical method to measure the variability of the data. This will be applicable only for the continuous variables (Credit-amount, Duration of credit and Age). The rank-ordered data will be divided into 4 equal parts called quartiles. Values are called the First (Q1) Second (Q2) and Third (Q3) quartiles. Q2 is the Median value of the dataset \cite{stat-trek-statistics}.
 
@@ -382,22 +382,20 @@ Cross-Tabulation is a statistical method used to compare the relationship betwee
   \label{fig:Figure20} 
 \end{figure}
 
-Figure \ref{fig:Figure20}shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married / widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
+Figure \ref{fig:Figure20} shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married / widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
 
 \subsubsection{Test of Independence}
 
-We need to identify the features that are closely related to the class/credit rating to build a predictive model. We do a test of independence on all our feature variables to identify the ones to be selected for data modeling. The method we use to do the test of Independence is the Chi-squared test. The output of the Chi-squared test is the input to the Logistical Regression Algorithm. Variables which are not related to the class variable will be discarded from further analysis of Logical Regression. 
+We need to identify the features that are closely related to the class / credit rating to build a predictive model. We do a test of independence on all our feature variables to identify the ones to be selected for data modeling. The method we use to do the test of Independence is the Chi-squared test. The output of the Chi-squared test is the input to the Logistical Regression Algorithm. Variables which are not related to the class variable will be discarded from further analysis of Logical Regression. 
 
-\textit{Pearson's Chi-squared test:}
-
-Chi-squared test is used to determine the significant difference between expected values and observed values in one or more categories. There are 2 types of Chi-squared test - Goodness of Fit and Test for Independence. 
+\textit{Pearson's Chi-squared test:} Chi-squared test is used to determine the significant difference between expected values and observed values in one or more categories. There are 2 types of Chi-squared test - Goodness of Fit and Test for Independence. 
 
 We use the second method - \emph{Test of Independence}. It compares 2 variables in a contingency table to check if they are related. In other words, it examines if the distributions of categorical variables are different from one another. 
 
 
 If the calculated value is small that means, the variables are related. If the value is large that means, the data is not related and not fit for analysis \cite{chi-square}.
 
-\textit{p-value:} p-value is the probability value that, when the null hypothesis is true, the chi-square value will be greater that the empirical value of the data. There is a p-value distribution chart available where it is calculated against he significance value, degrees of freedom and chi-square test value \cite{p-value}.
+\textit{p-value:} p-value is the probability value that, when the null hypothesis is true, the chi-square value will be greater than the empirical value of the data. There is a p-value distribution chart available where it is calculated against he significance value, degrees of freedom and chi-square test value \cite{p-value}.
 
 \textit{Degrees of freedom:} Degrees of freedom is the number of scores that can be varied. It is calculated using the formula,
 
@@ -424,7 +422,7 @@ Baseline models use simple summary statistics. In classification problems like o
 
 In this project we create 2 baseline models. 
 
-\textit{Baseline Model 1}: In this case, we consider all the input test customer records (300 customer records) belongs to the ''Good'' class. Since out of 1000 customers, 700 falls under ''Good'' class, we assume among the 300 customers in test dataset 70\% will fall under ''Good'' class and rest in ''Bad'' class, which means this baseline model holds 70\% accuracy. 
+\textit{Baseline Model 1}: In this model, we assume all the input test customer records (300 customer records) belongs to the ''Good'' class. Since out of 1000 customers, 700 falls under ''Good'' class, we assume among the 300 customers in test dataset 70\% will fall under ''Good'' class and rest in ''Bad'' class, which means this baseline model holds 70\% accuracy. 
 
 \begin{table}
   \caption{Baseline Model 1}
@@ -441,7 +439,7 @@ In this project we create 2 baseline models.
 
 Table \ref{tab:table2} shows the assumption in baseline model 1.
 
-\textit{Baseline Model 2}: In this case, we consider all the input test customer records (300 customer records) belongs to the ''Bad'' class. Since out of 1000 customers, 300 falls under ''Bad'' class, we assume among the 300 customers in test dataset 30\% will fall under ''Bad'' class and rest in ''Good'' class, which means this baseline model holds 30\% accuracy. 
+\textit{Baseline Model 2}: In this model, we assume all the input test customer records (300 customer records) belongs to the ''Bad'' class. Since out of 1000 customers, 300 falls under ''Bad'' class, we assume among the 300 customers in test dataset 30\% will fall under ''Bad'' class and rest in ''Good'' class, which means this baseline model holds 30\% accuracy. 
 
 \begin{table}
   \caption{Baseline Model 2}
@@ -472,15 +470,15 @@ We created 2 Decision Tree models to compare the accuracy.
 
 \textit{Decision Tree with maxDepth None:} In this model, we set the maxDepth value of the Tree to None and we calculated the accuracy using PySpark's ''MulticlassClassificationEvaluator''. In this case, the tree can become arbitrarily deep and complex and more chances of overfitting issues.
 
-The accuracy of the output of this model is 0.679
-Maximum number of Bins are 32
-Depth is None
+The accuracy of the output of this model is 0.679. Maximum number of Bins are 32. Depth is None.
 
 \textit{Decision Tree after adjusting the attribute values:} In this model, we set the maxDepth value to 6 and maxBins value to 20. We used the same PySpark's ''MulticlassClassificationEvaluator'' to calculate the accuracy. Since we have limited the maxDepth and maxBin values, the overfitting issues decreases.
 
-The accuracy of the output of this model is 0.716
-Number of Bins are 20
-Depth is 6
+\begin{itemize}
+   \item The accuracy of the output of this model is 0.716
+   \item Number of Bins are 20
+   \item Depth is 6
+\end{itemize}
 
 \subsection{Random Forest}
 
@@ -488,18 +486,17 @@ Random Forest Machine Learning algorithm which is explained in the section \ref{
 
 \textit{Random Forest with Default Settings:} In this case, the attributes of the Tree are selected by the ''RandomForestClassifier'' itself internally and accuracy of the model is calculated based on that.
 
-The accuracy of the output of this model is 0.756
-Maximum number of Bins are 32
-Maximum Depth is 5
-Maximum number of Trees are 20
+The accuracy of the output of this model is 0.756. Maximum number of Bins are 32. Maximum Depth is 5. Maximum number of Trees are 20.
 
 
 \textit{Tuning Random Forest with cross-validator:} In this case, we tune the Random Forest model by trying different attribute values for tree attributes - maxDepth, maxBin and numTrees. We can provide multiple values for each attribute. We provided 3 values for maxDepth, 2 values for maxBins and 3 values for numTrees. We will start with some random values for these attributes. 
 
 We use \emph{cross-validation} techniques in this type of Random Forest model to get the best model. PySpark ''CrossValidator'' will analyze the values of the attributes. In this scenario, the ''CrossValidator'' will choose 3 values of attributes from 3*2*3 values. It will then try different combinations of the attribute values internally and finally, the model will get tuned to a final set of attributes which derive the best model with maximum accuracy. 
 
-The accuracy of the output of this model is 0.779
-Number of Trees are 100
+\begin{itemize}
+   \item The accuracy of the output of this model is 0.779
+   \item Number of Trees are 100
+\end{itemize}
 
 As we identified the best model with maximum accuracy is the Random Forest model, we passed the actual dataset to this model and received an accuracy of 0.845
 
@@ -523,7 +520,7 @@ Now we have all the desired models created which can predict the class of a new 
   \label{fig:Figure23} 
 \end{figure}
 
-\textit{Feature Importance:} Feature Importance is the list of important predictors that are the top contributed variables towards building the predictive model. Normally the variable with maximum dependency would be treated as the root note by the algorithm. We could calculate the feature importance only for the Random forest algorithm by using the class ''bestModel.featureImportances''. Figure \ref{fig:Figure24} shows the list of predictors. We could see that the variable ''Account Balance'' contributes maximum to the predictions. 
+\textit{Feature Importance:} Feature Importance is the list of important predictors that are the top contributed variables towards building the predictive model. Normally the variable with maximum dependency would be treated as the root node by the algorithm. We could calculate the feature importance only for the Random forest algorithm by using the class ''bestModel.featureImportances''. Figure \ref{fig:Figure24} shows the list of predictors. We could see that the variable ''Account Balance'' contributes maximum to the predictions. 
 
 \begin{figure}[htb]
   \centering
@@ -532,7 +529,7 @@ Now we have all the desired models created which can predict the class of a new 
   \label{fig:Figure24} 
 \end{figure}
 
-\textit{Model Accuracy Comparison:} Figure \ref{fig:Figure25} shows the accuracy of different predictive models that we created. We plotted the output of ''MultiClassifierEvaluator'' for Decision Tree and Random Forest. We can understand from the graph that baseline model 2 has got the least accuracy and Random Forest has got the most. 
+\textit{Model Accuracy Comparison:} Figure \ref{fig:Figure25} shows the accuracy of different predictive models that we created. We plotted the output of ''MulticlassClassificationEvaluator'' for Decision Tree and Random Forest. We can understand from the graph that baseline model 2 has got the least accuracy and Random Forest has got the most. 
 
 \begin{figure}[htb]
   \centering
@@ -559,9 +556,9 @@ A penalty matrix is defined to calculate the loss to the bank. Penalty will be a
   \end{tabular}
 \end{table}
 
-Table \ref{tab:table4} shows the penalty matrix. For right predictions penalty is 0. If a good customer predicted as bad, the penalty is 1 and if a bad customer predicted as good, the penalty is 5. The sum of the penalty values multiplied with the respective number of misclassified customers will provide the total amount of loss/penalty.
+Table \ref{tab:table4} shows the penalty matrix. For right predictions penalty is 0. If a good customer predicted as bad, the penalty is 1 and if a bad customer predicted as good, the penalty is 5. The sum of the penalty values multiplied with the respective number of misclassified customers will provide the total amount of loss / penalty.
 
-Figure \ref{fig:Figure26} shows the penalty comparison of different predictive models. Base model 1 has more chances of predicting bad customers as good because it blindly assumes that all the incoming customers are good. Hence it has got more penalty value. Base model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model2 has minimum penalty. 
+Figure \ref{fig:Figure26} shows the penalty comparison of different predictive models. Base model 1 has more chances of predicting bad customers as good because it blindly assumes that, all the incoming customers are good. Hence it has got more penalty value. Base model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model2 has minimum penalty. 
 
 \begin{figure}[htb]
   \centering
@@ -570,7 +567,7 @@ Figure \ref{fig:Figure26} shows the penalty comparison of different predictive m
   \label{fig:Figure26} 
 \end{figure}
 
-\textit{Accuracy and Penalty Comparison:} Figure \ref{fig:Figure27} shows the accuracy and penalty comparison for all the 4 models. Random Forest has the most accurate and with minimal penalty. Hence Random Forest is the best model out of all.
+\textit{Accuracy and Penalty Comparison:} Figure \ref{fig:Figure27} shows the accuracy and penalty comparison for all the 4 models. Random Forest is the most accurate model and with minimal penalty. Hence Random Forest is the best model out of all.
 
 \begin{figure}[htb]
   \centering
@@ -581,12 +578,12 @@ Figure \ref{fig:Figure26} shows the penalty comparison of different predictive m
 
 \section{Discussion}
 
-We have built 4 predictive models. Baseline model 1 and 2, Decision Tree and Random Forest. We did a small study on Logistical Regression model as well. There are many other machine learning algorithms available which are suitable for classification analysis. Current analysis uses only 20 feature variables and 1000 customer records to populate the predictive models. In predictive analysis, how larger the training dataset better the outcome is. Current analysis can be extended to really big data with more feature variables customer records and also data from multiple years. data processing can be done using distributed big data processing systems available today for better accuracy. Unfortunately, such a large data is not publically available for studies in finance area right now. Hence we tried big data technologies in a comparatively smaller dataset. 
+We have built 4 predictive models. Baseline model 1 and 2, Decision Tree and Random Forest. We did a small study on Logistical Regression model as well. There are many other machine learning algorithms available which are suitable for classification analysis. Current analysis uses only 20 feature variables and 1000 customer records to populate the predictive models. In predictive analysis, the bigger the training dataset, the better the outcome. Current analysis can be extended to really big data with more feature variables customer records and also data from multiple years. Data processing can be done using distributed big data processing systems available today for better accuracy. Unfortunately, such a large data is not publically available for studies in finance area right now. Hence we tried big data technologies in a comparatively smaller dataset. 
 
 
 \section{Conclusion}
 
-Out of 4 predictive models created as part of this project, Random Forest has the maximum accuracy in classifying the customers in the right class. Even if it gives an accuracy of around 85\% it is not an error free model. There are 15\% chances for misclassification. The size of the dataset that we considered to develop this model may have a direct impact. If we can train the model with a large data set with tens of thousands of customer records and feature variables, the accuracy may increase close to 100\%. There might be other more advanced machine learning algorithms and tools coming up to explore the chances of increasing the overall accuracy of the predictive models in common.
+Out of 4 predictive models created, Random Forest has the maximum accuracy in classifying the customers in the right class. Even if it gives an accuracy of around 85\% it is not an error free model. There are 15\% chances for misclassification. The size of the dataset that we considered to develop this model may have a direct impact. If we can train the model with a larger data set with tens of thousands of customer records and feature variables, the accuracy may increase close to 100\%. There might be other more advanced machine learning algorithms and tools coming up to explore the chances of increasing the overall accuracy of the predictive models in common.
 
 
 \begin{acks}
@@ -602,18 +599,18 @@ The author would like to thank Dr. Gregor von Laszewski, Juliette Zurick, Miao J
 
 \section{Project References}
 
-All project related documents are available in the github directory \cite{github}
+All project related documents are available in the github directory i523/hid328/project:  \url{https://github.com/bigdata-i523/hid328/tree/master/project} \cite{github}.
 
 \subsection{Makefile}\label{Makefile}
 
-Make file is created assuming that the target system has Ubuntu OS and Python3 installed already. This can be executed from Terminal window. It is available in the github directory \cite{code}
+Make file is created assuming that the target system has Ubuntu OS and Python3 installed already. This can be executed from terminal window from folder i523/hid328/project/code using command ''make run''. Makefile is available in the github directory i523/hid328/project/code \cite{code}.
 
 \subsection{Data Set}
 
-Dataset ''credit-data.csv'' is available in the given Google Drive /project-data/hid328/credit-data.csv 
+''credit-data.csv'' is available in Google Drive /project-data/hid328/.
 
 \subsection{Project Code}\label{Project Code}
 
-Project code is available in the Jupyter notebook in the github directory \cite{code}
+Project code is available in the Jupyter notebook ''project.ipynb'' in the github directory i523/hid328/project/code \cite{code}.
 
 \end{document}
