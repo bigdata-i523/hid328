@@ -23,7 +23,7 @@
 
 
 \begin{abstract}
-Banks often want to know the profile of their profitable top 1\% or 20\% customers looks like. Conversely, they may also wonder what the general profile is of the customers in the worst 1\% and 20\% of profit. Based on customer's data variables at any given time, a good predictive model can predict which profit group (extremely unprofitable, average, extremely profitable, etc.) customers fall into. This helps financial institutions to better understand what drives the customer profit and accordingly take decisions to sell their products to the right customers. Further down in banking sector, it is a challenge to identify customers who are most likely to repay the loan. Recent big data and machine learning technologies have the potential to predict good customers and open doors for banks to profitable growth. Since the banking sector has evolved over the periods, there are tremendous amount of historical data available to analyze. We show how bank's big data can be analyzed and create a model based on that, to classify customers. In addition to big data technologies, we use machine learning algorithms to build a predictive model to predict creditworthy and uncreditworthy customers from a list of new customers. Various classification algorithms like Decision Tree and Random Forest are used to build the models and trace the best model among them to achieve the goal.
+Banks often want to know the profile of their profitable top 1\% or 20\% customers looks like. Conversely, they may also wonder what the general profile is of the customers in the worst 1\% and 20\% of profit. Based on customer's data variables at any given time, a good predictive model can predict which profit group (extremely unprofitable, average, extremely profitable etc) customers fall into. This helps financial institutions to better understand what drives the customer profit and accordingly take decisions to sell their products to the right customers. Further down in banking sector, it is a challenge to identify customers who are most likely to repay the loan. Recent big data and machine learning technologies have the potential to predict good customers and open doors for banks to profitable growth. Since the banking sector has evolved over the periods, there are tremendous amount of historical data available to analyze. We show how bank's big data can be analyzed and create a model based on that, to classify customers. In addition to big data technologies, we use machine learning algorithms to build a predictive model to predict creditworthy and uncreditworthy customers from a list of new customers. Various classification algorithms like Decision Tree and Random Forest are used to build the models and trace the best model among them to achieve the goal.
 
 \end{abstract}
 
@@ -473,7 +473,7 @@ The accuracy of the output of this model is 0.756. Maximum number of Bins are 32
 
 \textit{Tuning Random Forest with cross-validator:} In this case, we tune the Random Forest model by trying different attribute values for tree attributes - maxDepth, maxBin and numTrees. We can provide multiple values for each attribute. We provided 3 values for maxDepth, 2 values for maxBins and 3 values for numTrees. We will start with some random values for these attributes. 
 
-We use \emph{cross-validation} techniques in this type of Random Forest model to get the best model. PySpark ''CrossValidator'' will analyze the values of the attributes. In this scenario, the ''CrossValidator'' will choose 3 values of attributes from 3*2*3 values. It will then try different combinations of the attribute values internally and finally, the model will get tuned to a final set of attributes which derive the best model with maximum accuracy. 
+We use \emph{cross-validation} techniques in this type of Random Forest model to get the best model. PySpark ''CrossValidator'' will analyze the values of the attributes. In this scenario, the ''CrossValidator'' will choose 3 values of attributes from 3 * 2 * 3 values. It will then try different combinations of the attribute values internally and finally, the model will get tuned to a final set of attributes which derive the best model with maximum accuracy. 
 
 \begin{itemize}
    \item The accuracy of the output of this model is 0.779
@@ -548,7 +548,7 @@ A penalty matrix is defined to calculate the loss to the bank. Penalty will be a
 
 Table \ref{tab:table4} shows the penalty matrix. For right predictions penalty is 0. If a good customer predicted as bad, the penalty is 1 and if a bad customer predicted as good, the penalty is 5. The sum of the penalty values multiplied with the respective number of misclassified customers will provide the total amount of loss / penalty.
 
-Figure \ref{fig:Figure24} shows the penalty comparison of different predictive models. Base model 1 has more chances of predicting bad customers as good because it blindly assumes that, all the incoming customers are good. Hence it has got more penalty value. Base model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model2 has minimum penalty. 
+Figure \ref{fig:Figure24} shows the penalty comparison of different predictive models. Base model 1 has more chances of predicting bad customers as good because it blindly assumes that, all the incoming customers are good. Hence it has got more penalty value. Base model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model 2 has minimum penalty. 
 
 \begin{figure}[htb]
   \centering
@@ -570,7 +570,7 @@ Figure \ref{fig:Figure25} shows the accuracy and penalty comparison for all the 
 
 \section{Discussion}
 
-We have built 4 predictive models. Baseline model 1 and 2, Decision Tree and Random Forest. We did a small study on Logistical Regression model as well. There are many other machine learning algorithms available which are suitable for classification analysis. Current analysis uses only 20 feature variables and 1000 customer records to populate the predictive models. In predictive analysis, the bigger the training dataset, the better the outcome. Current analysis can be extended to really big data with more feature variables customer records and also data from multiple years. Data processing can be done using distributed big data processing systems available today for better accuracy. Unfortunately, such a large data is not publically available for studies in finance area right now. Hence we tried big data technologies in a comparatively smaller dataset. 
+We have built 4 predictive models. Baseline model 1 and 2, Decision Tree and Random Forest. We did a small study on Logistical Regression model as well. There are many other machine learning algorithms available which are suitable for classification analysis. Current analysis uses only 20 feature variables and 1000 customer records to populate the predictive models. In predictive analysis, the bigger the training dataset, the better the outcome. Current analysis can be extended to really big data with more feature variables customer records and also data from multiple years. Data processing can be done using distributed big data processing systems available today for better accuracy. Unfortunately, such a large data is not publicly available for studies in finance area right now. Hence we tried big data technologies in a comparatively smaller dataset. 
 
 
 \section{Conclusion}
@@ -591,11 +591,11 @@ The author would like to thank Dr. Gregor von Laszewski, Juliette Zurick, Miao J
 
 \section{Project References}
 
-All project related documents are available in the github directory i523/hid328/project:  \url{https://github.com/bigdata-i523/hid328/tree/master/project} \cite{github}.
+All project related documents are available in the github repository i523/hid328/project:  \url{https://github.com/bigdata-i523/hid328/tree/master/project} \cite{github}.
 
 \subsection{Makefile}\label{Makefile}
 
-Make file is created assuming that the target system has Ubuntu OS and Python3 installed already. This can be executed from terminal window from folder i523/hid328/project/code using command ''make run''. Makefile is available in the github directory i523/hid328/project/code \cite{code}.
+Make file is created assuming that the target system has Ubuntu OS and Python3 installed already. This can be executed from terminal window from folder i523/hid328/project/code using command ''make run''. Makefile is available in the github repository i523/hid328/project/code \cite{code}.
 
 \subsection{Data Set}
 
@@ -603,6 +603,6 @@ Make file is created assuming that the target system has Ubuntu OS and Python3 i
 
 \subsection{Project Code}\label{Project Code}
 
-Project code is available in the Jupyter notebook ''project.ipynb'' in the github directory i523/hid328/project/code \cite{code}.
+Project code is available in the Jupyter notebook ''project.ipynb'' in the github repository i523/hid328/project/code \cite{code}.
 
 \end{document}
