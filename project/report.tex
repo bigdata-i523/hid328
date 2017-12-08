@@ -27,7 +27,7 @@ Banks often want to know the profile of their profitable top 1\% or 20\% custome
 
 \end{abstract}
 
-\keywords{i523, HID328, Big Data, Spark, Python, Decision Trees , Random Forest}
+\keywords{i523, HID328, Big Data, Spark, Python, Decision Trees, Random Forest}
 
 
 \maketitle
@@ -65,12 +65,12 @@ We have taken a sample data set of loan applications received by a bank. We expl
 
 Exploratory analysis like Chi-square test is done to understand the data and feature selection for analysis as part of the data mining process. We have done graphical representations to show how the actual data is related and what are the direct insights available from the cleaned data set.
 
-Machine learning approaches are used for the data evaluation and to build our predictive model. We develop various models using machine learning algorithms and compare them to identify the best model to choose for our problem solution \cite{sas-machine-learning}. To develop the models we first split the data set into two parts- training data and test data. We defined 2 baseline models, Decision trees and the Random Forest model.  We compare all these models to identify the most effective and least penalty model. We use python as the programming language to build these models and display visualizations for easy comparison and results discussion.
+Machine learning approaches are used for the data evaluation and to build our predictive model. We develop various models using machine learning algorithms and compare them to identify the best model to choose for our problem solution \cite{sas-machine-learning}. To develop the models we first split the data set into two parts - training data and test data. We defined 2 baseline models, Decision trees and the Random Forest model.  We compare all these models to identify the most effective and least penalty model. We use python as the programming language to build these models and display visualizations for easy comparison and results discussion.
 
 \subsubsection{Python}
 
 Python version 3 is the programming language used to develop the models and visualizations in this project. Python is a general purpose programming language that is open source, easy to use, faster to write, flexible and powerful. It has a rich set of libraries and utilities for data processing and analytics tasks \cite{python-important-big-data-analytics-applications}. Other important features of Python include the ability to process big data, scalability of applications and easiness to integrate with web applications. 
-We use Python libraries like pandas, matplotlib, seaborn and numpy in this project.
+We use Python libraries like pandas, matplotlib, seaborn and numpy.
 
 \textit{Pandas:} Pandas is one of the most popular libraries in Python. Pandas is used for data manipulation and analysis \cite{pandas}, read data files from different sources, create data frames and some built-in visualizations \cite{dataconomy-python}.
 
@@ -84,7 +84,7 @@ We use Python libraries like pandas, matplotlib, seaborn and numpy in this proje
 
 Even though Python is powerful to handle complex big data analytic tasks, it alone cannot handle the big data processing. A distributed framework would require to handle a large amount of data. Spark is a distributed computing framework which supports Python \cite{pyspark}.
 
-PySpark is used to carry out the data preprocessing tasks in this project and it is the Python API for Spark.
+PySpark is used to carry out the data preprocessing tasks and it is the Python API for Spark.
 
 \subsubsection{Jupyter Notebook}
 
@@ -104,7 +104,7 @@ We use supervised machine learning approaches in this project. In particular, th
 
 \subsubsection{Decision Tree}\label{Decision Tree}
 
-Decision Tree is a supervised machine learning algorithm used to solve both classification and regression problems. In decision tree, a trained model with a set of rules will be created based on the training data. The target class or value of a test / new data set will be predicted based on this training rules. Decision Tree algorithm is simple to understand as it uses a tree model representation to solve the problem. It starts from a root node and continues with other decision nodes. Each internal decision nodes corresponds to the feature variables and each leaf nodes corresponds to the class label \cite{decision-tree}. Figure \ref{fig:Figure2} shows the decision tree classifier. 
+Decision Tree is a supervised machine learning algorithm used to solve both classification and regression problems. In Decision Tree, a trained model with a set of rules will be created based on the training data. The target class or value of a test/new data set will be predicted based on this training rules. Decision Tree algorithm is simple to understand as it uses a tree model representation to solve the problem. It starts from a root node and continues with other decision nodes. Each internal decision nodes corresponds to the feature variables and each leaf nodes corresponds to the class label \cite{decision-tree}. Figure \ref{fig:Figure2} shows the decision tree classifier. 
 
 
 \begin{figure}[htb]
@@ -131,7 +131,7 @@ Like Decision Tree, Random Forest algorithm also can be used for classification 
   \label{fig:Figure3} 
 \end{figure}
 
-Random Forest algorithm progresses via 2 stages - Random forest creation and Perform prediction. To create the Random Forest, we select a random number of feature variables from the total list of feature variables in the training data and create a Decision Tree out of it. We repeat this process to create desired number of trees. These randomly created trees will form a Random Forest. Figure \ref{fig:Figure4} shows how random forest algorithm works. 
+Random Forest algorithm progresses via 2 stages - Random Forest creation and Perform prediction. To create the Random Forest, we select a random number of feature variables from the total list of feature variables in the training data and create a Decision Tree out of it. We repeat this process to create desired number of trees. These randomly created trees will form a Random Forest. Figure \ref{fig:Figure4} shows how random forest algorithm works. 
 
 \begin{figure}[htb]
   \centering
@@ -161,7 +161,7 @@ Technologies used in this project are discussed in detail in section \ref{Method
 
 All these installation steps are included in a make file referred in appendix \ref{Makefile}.
 
-\section{Data Set}
+\section{Dataset}
 
 We used the German Credit data which is publically available in the UCI Machine Learning Repository \cite{uci} and also in the website of PennState Eberly College of Science \cite{psu-site}. Both these sites have the cleaned dataset and not the original one. The dataset that we used (german-credit.csv) is taken from the website of PennState Eberly College of Science \cite{psu-site} and it is uploaded in the Github repository \cite{github}. We recreated the original one from these data sets to understand and try out the data cleaning processes. We start our project with the recreated original data set (credit-data.csv) which is available in the Github repository \cite{github}. 
 
@@ -221,7 +221,7 @@ The data going to the analytics model should be clean and noise free. Hence data
 
 \subsubsection{Data Reduction Techniques}
 
-To reduce the dimensionality problem and the computational cost, because of a large number of variables and instances in the data set, we try to gather only the required set of quality data. Data reduction techniques include feature selection, instance selection and discretization. Figure \ref{fig:Figure6} shows data reduction techniques \cite{preprocessing}
+To reduce the dimensionality problem and the computational cost, because of a large number of variables and instances in the data set, we try to gather only the required set of quality data. Data reduction techniques include feature selection, instance selection and discretization. Figure \ref{fig:Figure6} shows data reduction techniques \cite{preprocessing}.
 
 \begin{figure}[htb]
   \centering
@@ -231,7 +231,7 @@ To reduce the dimensionality problem and the computational cost, because of a la
   \label{fig:Figure6} 
 \end{figure}
 
-With respect to our chosen data set, data reduction techniques were already applied to the raw data and 1000 customer records and 21 variables were shortlisted. All these variables are either categorical (like Account-Balance, Previous-credit, purpose etc) or continuous (Duration-of-credit, Installment-percent, dependents). As part of data preparation for our analysis, we transform the values of categorical variable's from string to scores (numerical values). For example, the variable creditability got 2 values - good and bad. After transformation process, ''good'' get replaced by ''1'' and ''bad'' get replaced by ''0''. Likewise, we gave scores for the values of the variables, Foreign-Worker, Telephone, Previous-Credit, Purpose, Sex-MaritalStatus, Guarantors and Type-apartment.
+With respect to our chosen data set, data reduction techniques were already applied to the raw data and 1000 customer records and 21 variables were shortlisted. All these variables are either categorical (like Account-Balance, Previous-credit, purpose etc) or continuous (Duration-of-credit, Installment-percent, dependents). As part of data preparation for our analysis, we transform the values of categorical variable's from string to scores (numerical values). For example, the variable ''creditability'' got 2 values - good and bad. After transformation process, ''good'' get replaced by ''1'' and ''bad'' get replaced by ''0''. Likewise, we gave scores for the values of the variables, Foreign-Worker, Telephone, Previous-Credit, Purpose, Sex-MaritalStatus, Guarantors and Type-apartment.
 
 
 \section{Data Analysis}
@@ -246,7 +246,7 @@ Exploratory analysis is basically to explore the data and understand what it act
 
 After data preprocessing, our dataset includes 1000 customer records with 20 feature variable and 1 class variable. Feature variable values can be visualized to understand the characteristics and how they are related to each other - proportionally or inversely. 
 
-Figure \ref{fig:Figure7} shows the histogram of credit amount disbursed with respect to frequency. From this diagram, we understand that most of the customers arevrequested for loans for up to 2500 German Marks. The number of customers decreases as the loan amount increases. And very few customers fall under the loan amount category over 10000 German Marks. 
+Figure \ref{fig:Figure7} shows the histogram of credit amount disbursed with respect to frequency. From this diagram, we understand that most of the customers are requested for loans for up to 2500 German Marks. The number of customers decreases as the loan amount increases. And very few customers fall under the loan amount category over 10000 German Marks. 
 
 \begin{figure}[htb]
   \centering
@@ -364,11 +364,11 @@ Cross-Tabulation is a statistical method used to compare the relationship betwee
   \label{fig:Figure18} 
 \end{figure}
 
-Figure \ref{fig:Figure18} shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married / widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
+Figure \ref{fig:Figure18} shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married/widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
 
 \subsubsection{Test of Independence}
 
-We need to identify the features that are closely related to the class / credit rating to build a predictive model. We do a test of independence on all our feature variables to identify the ones to be selected for data modeling. The method we use to do the test of Independence is the Chi-squared test. The output of the Chi-squared test is the input to the Logistical Regression Algorithm. Variables which are not related to the class variable will be discarded from further analysis of Logical Regression. 
+We need to identify the features that are closely related to the class/credit rating to build a predictive model. We do a test of independence on all our feature variables to identify the ones to be selected for data modeling. The method we use to do the Test of Independence is the Chi-squared test. The output of the Chi-squared test is the input to the Logistical Regression Algorithm. Variables which are not related to the class variable will be discarded from further analysis of Logical Regression. 
 
 \textit{Pearson's Chi-squared test:} Chi-squared test is used to determine the significant difference between expected values and observed values in one or more categories. There are 2 types of Chi-squared test - Goodness of Fit and Test for Independence. 
 
@@ -382,7 +382,7 @@ If the calculated value is small that means, the variables are related. If the v
 \textit{Degrees of freedom:} Degrees of freedom is the number of scores that can be varied. It is calculated using the formula,
 
 \begin{equation}
-Degrees of freedom=(r-1)*(c-1)
+Degrees of freedom = (r-1)*(c-1)
 \end{equation}
 
 The calculated values are shown in figure \ref{fig:Figure19}.
@@ -548,7 +548,7 @@ A penalty matrix is defined to calculate the loss to the bank. Penalty will be a
 
 Table \ref{tab:table4} shows the penalty matrix. For right predictions penalty is 0. If a good customer predicted as bad, the penalty is 1 and if a bad customer predicted as good, the penalty is 5. The sum of the penalty values multiplied with the respective number of misclassified customers will provide the total amount of loss / penalty.
 
-Figure \ref{fig:Figure24} shows the penalty comparison of different predictive models. Base model 1 has more chances of predicting bad customers as good because it blindly assumes that, all the incoming customers are good. Hence it has got more penalty value. Base model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model 2 has minimum penalty. 
+Figure \ref{fig:Figure24} shows the penalty comparison of different predictive models. Baseline model 1 has more chances of predicting bad customers as good because it blindly assumes that, all the incoming customers are good. Hence it has got more penalty value. Baseline model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model 2 has minimum penalty. 
 
 \begin{figure}[htb]
   \centering
