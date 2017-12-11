@@ -171,7 +171,7 @@ Dataset includes 1000 customer records with 20 feature variables and a class var
   \caption{Variables and description
   \cite{psu-site}}
   \label{tab:table1}
-  \begin{tabular}{cc}
+  \begin{tabular}{llcc}
     \toprule
      Variable& Description\\
     \midrule
@@ -251,7 +251,8 @@ Figure \ref{fig:Figure7} shows the histogram of credit amount disbursed with res
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure7.png}
-  \caption{Credit amount vs. Frequency}
+  \caption{Credit amount vs. Frequency
+  \cite{german-credit-sri-sai}}
   \label{fig:Figure7} 
 \end{figure}
 
@@ -260,14 +261,16 @@ Figure \ref{fig:Figure8} and Figure \ref{fig:Figure9} shows the credit amount av
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure8.png}
-  \caption{Credit amount vs. bad customers}
+  \caption{Credit amount vs. bad customers
+  \cite{german-credit-sri-sai}}
   \label{fig:Figure8} 
 \end{figure}
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure9.png}
-  \caption{Credit amount vs. good customers}
+  \caption{Credit amount vs. good customers
+  \cite{german-credit-sri-sai}}
   \label{fig:Figure9} 
 \end{figure}
 
@@ -276,7 +279,8 @@ Figure \ref{fig:Figure10} shows the duration of credit in months vs. number of c
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure10.png}
-  \caption{Duration of credit in months vs. frequency}
+  \caption{Duration of credit in months vs. frequency
+  \cite{german-credit-sri-sai}}
   \label{fig:Figure10}
 \end{figure}
 
@@ -285,14 +289,16 @@ Figure \ref{fig:Figure11} and Figure \ref{fig:Figure12} shows the duration of cr
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure11.png}
-  \caption{Duration of credit in months vs. bad customers}
+  \caption{Duration of credit in months vs. bad customers
+  \cite{german-credit-sri-sai}}
   \label{fig:Figure11} 
 \end{figure}
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure12.png}
-  \caption{Duration of credit in months vs. good customers}
+  \caption{Duration of credit in months vs. good customers
+  \cite{german-credit-sri-sai}}
   \label{fig:Figure12} 
 \end{figure}
 
@@ -307,14 +313,21 @@ Figure \ref{fig:Figure13} shows how customers are scattered with respect to age.
 
 \subsubsection{Data Classification}\label{Data Classification}
 
-We have one class variable ''Creditability'' to classify the customers based on the bank's opinion on the actual applicants. We could extract this class information from dataset using PySpark Python script ''GroupBy''. Figure \ref{fig:Figure14} shows the output of the script.
+We have one class variable ''Creditability'' to classify the customers based on the bank's opinion on the actual applicants. We could extract this class information from dataset using PySpark Python script ''GroupBy''. Table \ref{tab:table2} shows the output of the script.
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure14.png}
+
+\begin{table}
   \caption{Data classification}
-  \label{fig:Figure14} 
-\end{figure}
+  \label{tab:table2}
+  \begin{tabular}{lclc}
+    \toprule
+     Creditability& Count\\
+    \midrule
+    0& 300\\
+    1& 700\\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 Customers in our dataset are classified into 2 classes - Good (1 = Creditworthy) and Bad (0 = Uncreditworthy). We have 700 customers in the Good class and 300 customers in the Bad class. We divide our dataset of 1000 customer records randomly into 2 parts. First part is the training dataset with 700 customer records and second part is the test dataset of 300 customer records.
 
@@ -325,46 +338,58 @@ Interquartile Range is a statistical method to measure the variability of the da
 
 We used pandas quantile function to extract this information for all the continuous variables.
 
-Figure \ref{fig:Figure15} shows the variability of Credit-Amount.
+Figure \ref{fig:Figure14} shows the variability of Credit-Amount.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure14.png}
+  \caption{Variability in Credit-Amount}
+  \label{fig:Figure14} 
+\end{figure}
+
+Figure \ref{fig:Figure15} shows the variability of Duration of credit.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure15.png}
-  \caption{Variability in Credit-Amount}
+  \caption{Variability of Duration of credit}
   \label{fig:Figure15} 
 \end{figure}
 
-Figure \ref{fig:Figure16} shows the variability of Duration of credit.
+Figure \ref{fig:Figure16} shows the variability of Age.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure16.png}
-  \caption{Variability of Duration of credit}
-  \label{fig:Figure16} 
-\end{figure}
-
-Figure \ref{fig:Figure17} shows the variability of Age.
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure17.png}
   \caption{Variability of Age}
-  \label{fig:Figure17} 
+  \label{fig:Figure16} 
 \end{figure}
 
 \subsubsection{Cross-Tabulation}
 
 Cross-Tabulation is a statistical method used to compare the relationship between categorical variables. In our scenario, we examine the relationship of the categorical variables with the class variable ''creditability''. We create a \emph{contingency table} which displays the frequency of categorical variables with respect to the class \cite{cross-tabulation}. 
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure18.png}
-  \caption{Contingency table of sex-marital status
-  \cite{psu-site}}
-  \label{fig:Figure18} 
-\end{figure}
 
-Figure \ref{fig:Figure18} shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married/widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
+\begin{table}[]
+\centering
+\caption{Contingency table of sex-marital status
+\cite{psu-site}}
+\label{tab:table3}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\multirow{}{}{Creditability}} & \multicolumn{4}{l|}{Sex-Marital Status} & \multirow{}{}{Row Total} \\ \cline{2-5}
+\multicolumn{1}{|c|}{}                               & 1        & 2        & 3       & 4       &                            \\ \hline
+\multirow{}{}{Good}                                & 30       & 201      & 402     & 67      & \multirow{}{}{700}       \\ \cline{2-5}
+                                                     & 0.6      & 0.6      & 0.7     & 0.7     &                            \\ \hline
+\multirow{}{}{Bad}                                 & 20       & 109      & 146     & 25      & \multirow{}{}{300}       \\ \cline{2-5}
+                                                     & 0.4      & 0.4      & 0.3     & 0.3     &                            \\ \hline
+\multirow{}{}{Column Total}                        & 50       & 310      & 548     & 92      & \multirow{}{}{1000}      \\ \cline{2-5}
+                                                     & 0.0      & 0.3      & 0.5     & 0.1     &                            \\ \hline
+\end{tabular}
+\end{table}
+
+
+Table \ref{tab:table3} shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married/widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
 
 \subsubsection{Test of Independence}
 
@@ -385,13 +410,13 @@ If the calculated value is small that means, the variables are related. If the v
 Degrees of freedom = (r-1)*(c-1)
 \end{equation}
 
-The calculated values are shown in figure \ref{fig:Figure19}.
+The calculated values are shown in figure \ref{fig:Figure17}.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure19.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure17.png}
   \caption{Chi-square, df and p values}
-  \label{fig:Figure19} 
+  \label{fig:Figure17} 
 \end{figure}
 
 \section{Models}
@@ -408,8 +433,8 @@ In this project we create 2 baseline models.
 
 \begin{table}
   \caption{Baseline Model 1}
-  \label{tab:table2}
-  \begin{tabular}{cc}
+  \label{tab:table4}
+  \begin{tabular}{lclc}
     \toprule
      & Good\\
     \midrule
@@ -419,14 +444,14 @@ In this project we create 2 baseline models.
   \end{tabular}
 \end{table}
 
-Table \ref{tab:table2} shows the assumption in baseline model 1.
+Table \ref{tab:table4} shows the assumption in baseline model 1.
 
 \textit{Baseline Model 2}: In this model, we assume all the input test customer records (300 customer records) belongs to the ''Bad'' class. Since out of 1000 customers, 300 falls under ''Bad'' class, we assume among the 300 customers in test dataset 30\% will fall under ''Bad'' class and rest in ''Good'' class, which means this baseline model holds 30\% accuracy. 
 
 \begin{table}
   \caption{Baseline Model 2}
-  \label{tab:table3}
-  \begin{tabular}{cc}
+  \label{tab:table5}
+  \begin{tabular}{lclc}
     \toprule
      & Bad\\
     \midrule
@@ -436,7 +461,7 @@ Table \ref{tab:table2} shows the assumption in baseline model 1.
   \end{tabular}
 \end{table}
 
-Table \ref{tab:table3} shows the assumption in baseline model 2.
+Table \ref{tab:table5} shows the assumption in baseline model 2.
 
 \subsection{Decision Tree Model}
 
@@ -488,42 +513,56 @@ Now we have all the desired models created which can predict the class of a new 
 
 \subsection{Prediction matrix} 
 
-Prediction matrix can be extracted using the ''groupby'' option in PySpark. Figure \ref{fig:Figure20} and Figure \ref{fig:Figure21} shows the prediction matrix of Decision Tree and Random Forest respectively. Decision Tree has got 219 right predictions and Random Forest has got 240 right predictions out of 300 customer records.
+Prediction matrix can be extracted using the ''groupby'' option in PySpark. Table \ref{tab:table6} and Table \ref{tab:table7} shows the prediction matrix of Decision Tree and Random Forest respectively. Decision Tree has got 219 right predictions and Random Forest has got 240 right predictions out of 300 customer records.
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure20.png}
-  \caption{Prediction matrix - Decision Tree}
-  \label{fig:Figure20} 
-\end{figure}
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure21.png}
-  \caption{Prediction matrix - Random Forest}
-  \label{fig:Figure21} 
-\end{figure}
+\begin{table}[]
+\centering
+\caption{Prediction matrix - Decision Tree}
+\label{tab:table6}
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{Prediction} & 0.0       & 1.0       \\ \hline
+Label                            & \multicolumn{2}{l|}{} \\ \hline
+0.0                              & 35        & 55        \\ \hline
+1.0                              & 34        & 184       \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{Prediction matrix - Random Forest}
+\label{tab:table7}
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{Prediction} & 0.0       & 1.0       \\ \hline
+Label                            & \multicolumn{2}{l|}{} \\ \hline
+0.0                              & 40        & 50        \\ \hline
+1.0                              & 18        & 200       \\ \hline
+\end{tabular}
+\end{table}
 
 \subsection{Feature Importance} 
 
-Feature Importance is the list of important predictors that are the top contributed variables towards building the predictive model. Normally the variable with maximum dependency would be treated as the root node by the algorithm. We could calculate the feature importance only for the Random forest algorithm by using the class ''bestModel.featureImportances''. Figure \ref{fig:Figure22} shows the list of predictors. We could see that the variable ''Account Balance'' contributes maximum to the predictions. 
+Feature Importance is the list of important predictors that are the top contributed variables towards building the predictive model. Normally the variable with maximum dependency would be treated as the root node by the algorithm. We could calculate the feature importance only for the Random forest algorithm by using the class ''bestModel.featureImportances''. Figure \ref{fig:Figure18} shows the list of predictors. We could see that the variable ''Account Balance'' contributes maximum to the predictions. 
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure22.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure18.png.png}
   \caption{Random Forest Important Predictors}
-  \label{fig:Figure22} 
+  \label{fig:Figure18} 
 \end{figure}
 
 \subsection{Model Accuracy Comparison} 
 
-Figure \ref{fig:Figure23} shows the accuracy of different predictive models that we created. We plotted the output of ''MulticlassClassificationEvaluator'' for Decision Tree and Random Forest. We can understand from the graph that baseline model 2 has got the least accuracy and Random Forest has got the most. 
+Figure \ref{fig:Figure19} shows the accuracy of different predictive models that we created. We plotted the output of ''MulticlassClassificationEvaluator'' for Decision Tree and Random Forest. We can understand from the graph that baseline model 2 has got the least accuracy and Random Forest has got the most. 
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure23.png}
-  \caption{Model accuracy comparison}
-  \label{fig:Figure23} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure19.png}
+  \caption{Model accuracy comparison
+  \cite{german-credit-sri-sai}}
+  \label{fig:Figure19} 
 \end{figure}
 
 \subsection{Penalty Matrix} 
@@ -535,8 +574,8 @@ A penalty matrix is defined to calculate the loss to the bank. Penalty will be a
 \begin{table}
   \caption{Penalty Matrix
   \cite{psu-site}}
-  \label{tab:table4}
-  \begin{tabular}{ccc}
+  \label{tab:table8}
+  \begin{tabular}{lclclc}
     \toprule
      Actual& Predicted 'Good'& Predicted 'Bad'\\
     \midrule
@@ -546,26 +585,28 @@ A penalty matrix is defined to calculate the loss to the bank. Penalty will be a
   \end{tabular}
 \end{table}
 
-Table \ref{tab:table4} shows the penalty matrix. For right predictions penalty is 0. If a good customer predicted as bad, the penalty is 1 and if a bad customer predicted as good, the penalty is 5. The sum of the penalty values multiplied with the respective number of misclassified customers will provide the total amount of loss / penalty.
+Table \ref{tab:table8} shows the penalty matrix. For right predictions penalty is 0. If a good customer predicted as bad, the penalty is 1 and if a bad customer predicted as good, the penalty is 5. The sum of the penalty values multiplied with the respective number of misclassified customers will provide the total amount of loss / penalty.
 
-Figure \ref{fig:Figure24} shows the penalty comparison of different predictive models. Baseline model 1 has more chances of predicting bad customers as good because it blindly assumes that, all the incoming customers are good. Hence it has got more penalty value. Baseline model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model 2 has minimum penalty. 
+Figure \ref{fig:Figure20} shows the penalty comparison of different predictive models. Baseline model 1 has more chances of predicting bad customers as good because it blindly assumes that, all the incoming customers are good. Hence it has got more penalty value. Baseline model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model 2 has minimum penalty. 
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure24.png}
-  \caption{Model penalty comparison}
-  \label{fig:Figure24} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure20.png}
+  \caption{Model penalty comparison
+  \cite{german-credit-sri-sai}}
+  \label{fig:Figure20} 
 \end{figure}
 
 \subsection{Accuracy and Penalty Comparison} 
 
-Figure \ref{fig:Figure25} shows the accuracy and penalty comparison for all the 4 models. Random Forest is the most accurate model and with minimal penalty. Hence Random Forest is the best model out of all.
+Figure \ref{fig:Figure21} shows the accuracy and penalty comparison for all the 4 models. Random Forest is the most accurate model and with minimal penalty. Hence Random Forest is the best model out of all.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure25.png}
-  \caption{Model accuracy and penalty comparison}
-  \label{fig:Figure25} 
+  \includegraphics[width=1.0\columnwidth]{images/Figure21.png}
+  \caption{Model accuracy and penalty comparison
+  \cite{german-credit-sri-sai}}
+  \label{fig:Figure21} 
 \end{figure}
 
 \section{Discussion}
