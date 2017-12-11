@@ -371,14 +371,14 @@ Cross-Tabulation is a statistical method used to compare the relationship betwee
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure22.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure17.png}
   \caption{Contingency table of sex-marital status
    \cite{psu-site}}
-  \label{fig:Figure22} 
+  \label{fig:Figure17} 
 \end{figure}
 
 
-Figure \ref{fig:Figure22} shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married/widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
+Figure \ref{fig:Figure17} shows the contingency table created for the variable sex-marital status against class. It shows the number of good and bad customers distributed among the 4 categories of the variable sex-marital status. Category ''male: married/widowed'' has the maximum number of Good customers. Contingency tables are used to create the Chi-square values.
 
 \subsubsection{Test of Independence}
 
@@ -399,13 +399,13 @@ If the calculated value is small that means, the variables are related. If the v
 Degrees of freedom = (r-1)*(c-1)
 \end{equation}
 
-The calculated values are shown in figure \ref{fig:Figure17}.
+The calculated values are shown in figure \ref{fig:Figure18}.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure17.png}
+  \includegraphics[width=1.0\columnwidth]{images/Figure18.png}
   \caption{Chi-square, df and p values}
-  \label{fig:Figure17} 
+  \label{fig:Figure18} 
 \end{figure}
 
 \section{Models}
@@ -533,25 +533,25 @@ Prediction matrix can be extracted using the ''groupby'' option in PySpark. Tabl
 
 \subsection{Feature Importance} 
 
-Feature Importance is the list of important predictors that are the top contributed variables towards building the predictive model. Normally the variable with maximum dependency would be treated as the root node by the algorithm. We could calculate the feature importance only for the Random forest algorithm by using the class ''bestModel.featureImportances''. Figure \ref{fig:Figure18} shows the list of predictors. We could see that the variable ''Account Balance'' contributes maximum to the predictions. 
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure18.png.png}
-  \caption{Random Forest Important Predictors}
-  \label{fig:Figure18} 
-\end{figure}
-
-\subsection{Model Accuracy Comparison} 
-
-Figure \ref{fig:Figure19} shows the accuracy of different predictive models that we created. We plotted the output of ''MulticlassClassificationEvaluator'' for Decision Tree and Random Forest. We can understand from the graph that baseline model 2 has got the least accuracy and Random Forest has got the most. 
+Feature Importance is the list of important predictors that are the top contributed variables towards building the predictive model. Normally the variable with maximum dependency would be treated as the root node by the algorithm. We could calculate the feature importance only for the Random forest algorithm by using the class ''bestModel.featureImportances''. Figure \ref{fig:Figure19} shows the list of predictors. We could see that the variable ''Account Balance'' contributes maximum to the predictions. 
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure19.png}
+  \caption{Random Forest Important Predictors}
+  \label{fig:Figure19} 
+\end{figure}
+
+\subsection{Model Accuracy Comparison} 
+
+Figure \ref{fig:Figure20} shows the accuracy of different predictive models that we created. We plotted the output of ''MulticlassClassificationEvaluator'' for Decision Tree and Random Forest. We can understand from the graph that baseline model 2 has got the least accuracy and Random Forest has got the most. 
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure20.png}
   \caption{Model accuracy comparison
   \cite{german-credit-sri-sai}}
-  \label{fig:Figure19} 
+  \label{fig:Figure20} 
 \end{figure}
 
 \subsection{Penalty Matrix} 
@@ -576,26 +576,26 @@ A penalty matrix is defined to calculate the loss to the bank. Penalty will be a
 
 Table \ref{tab:table8} shows the penalty matrix. For right predictions penalty is 0. If a good customer predicted as bad, the penalty is 1 and if a bad customer predicted as good, the penalty is 5. The sum of the penalty values multiplied with the respective number of misclassified customers will provide the total amount of loss / penalty.
 
-Figure \ref{fig:Figure20} shows the penalty comparison of different predictive models. Baseline model 1 has more chances of predicting bad customers as good because it blindly assumes that, all the incoming customers are good. Hence it has got more penalty value. Baseline model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model 2 has minimum penalty. 
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=1.0\columnwidth]{images/Figure20.png}
-  \caption{Model penalty comparison
-  \cite{german-credit-sri-sai}}
-  \label{fig:Figure20} 
-\end{figure}
-
-\subsection{Accuracy and Penalty Comparison} 
-
-Figure \ref{fig:Figure21} shows the accuracy and penalty comparison for all the 4 models. Random Forest is the most accurate model and with minimal penalty. Hence Random Forest is the best model out of all.
+Figure \ref{fig:Figure21} shows the penalty comparison of different predictive models. Baseline model 1 has more chances of predicting bad customers as good because it blindly assumes that, all the incoming customers are good. Hence it has got more penalty value. Baseline model 2 has got least chances of classifying bad customers as good because it assumes all incoming customers are bad. Hence baseline model 2 has minimum penalty. 
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1.0\columnwidth]{images/Figure21.png}
-  \caption{Model accuracy and penalty comparison
+  \caption{Model penalty comparison
   \cite{german-credit-sri-sai}}
   \label{fig:Figure21} 
+\end{figure}
+
+\subsection{Accuracy and Penalty Comparison} 
+
+Figure \ref{fig:Figure22} shows the accuracy and penalty comparison for all the 4 models. Random Forest is the most accurate model and with minimal penalty. Hence Random Forest is the best model out of all.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{images/Figure22.png}
+  \caption{Model accuracy and penalty comparison
+  \cite{german-credit-sri-sai}}
+  \label{fig:Figure22} 
 \end{figure}
 
 \section{Discussion}
